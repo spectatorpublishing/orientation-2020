@@ -37,4 +37,5 @@ build:
     - script:
         name: run linters
         code: |
-          npm run lint
+          eslint --ext .jsx --ext .js src
+          stylelint "**/*.css" "**/*.js" "**/*.jsx"

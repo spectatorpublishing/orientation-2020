@@ -10,6 +10,7 @@ Storybook: `npm run storybook`
 ## Development Best Practices
 
 * All react files have `.jsx` extention, this helps linters run smoothly
+* Do not add `.css` files, we are using styled components
 * Commit intelligently, whenever you create new functionality in your component (no stupid names please)
 * Commit and push to your own branch (that describes the feature)
 
