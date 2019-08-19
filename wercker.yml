@@ -26,8 +26,6 @@ build:
     - npm-install
     # A step that executes `npm test` command
     - npm-test
-    # A step that executes `npm lint` command
-    - npm-lint
 
     # A custom script step, name value is used in the UI
     # and the code value contains the command that get executed
@@ -36,3 +34,7 @@ build:
         code: |
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
+    -script:
+        name: run linters
+        code: |
+          npm run lint
