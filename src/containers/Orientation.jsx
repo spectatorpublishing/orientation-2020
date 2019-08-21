@@ -131,6 +131,9 @@ export default class Orientation extends Component {
                 {' '}
                 Section 7
               </div>
+              <h1>Welcome</h1>
+              <h2>Class of 2023</h2>
+              <p>Select an option below to explore your orientation guide</p>
             </WelcomeContainer>
           </WelcomeColumn>
           <WelcomeColumn />
