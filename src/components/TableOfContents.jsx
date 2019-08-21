@@ -6,19 +6,17 @@ import PropTypes from 'prop-types';
 const Table = styled.div`
   display: flex;
   flex-direction: column;
-  height: 65vh;
+  height: auto;
   width: 25vw;
 `;
 const Container = styled.div`
   display: flex;
-  margin-top: 15vh; /*REMOVE THIS BEFORE INTEGRATION*/
   flex-direction: row;
   height: auto;
   width: auto;
 `;
 
 const Border = styled.div`
-  position: relative;
   height: auto;
   border: 2px solid;
   border-color: #f47263;
