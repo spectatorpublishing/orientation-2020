@@ -6,6 +6,7 @@ import SectionTitle from "../components/SectionTitle.jsx";
 import BannerButton from "../components/BannerButton.jsx";
 import MapsList from "../components/MapsList.jsx";
 import Article from "../components/Article";
+import DiscourseContainer from "../components/DiscourseContainer";
 
 const sectionDemo = {
   title: "demo title",
@@ -19,7 +20,6 @@ const bannerButtonDemo = {
   shadowColor: "#f26d5b",
   textColor: "#174d5b"
 };
-
 
 storiesOf("Section", module).add("with member information", () => (
   <SectionTitle title={sectionDemo.title} members={sectionDemo.members} />
@@ -58,10 +58,35 @@ storiesOf("MapsList", module).add("default", () => (
   <MapsList rightList={rightData} leftList={leftData} />
 ));
 
-storiesOf("Article", module).add("With Container", () => (
+storiesOf("Article", module).add("Without Container", () => (
   <Article
     link="https://www.columbiaspectator.com/sports/2019/08/17/football-kicks-off-season-at-ivy-league-media-day-hosted-by-espn/"
     photoUrl="https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/2ZOZLPVQ4NC5VOBUIY3HGTJDHU.jpg"
     headline="Football kicks off season at Ivy League Media Day hosted by ESPN"
   />
+));
+
+storiesOf("Discourse Container", module).add("With Articles", () => (
+  <DiscourseContainer>
+    <Article
+      link="https://www.columbiaspectator.com/sports/2019/08/17/football-kicks-off-season-at-ivy-league-media-day-hosted-by-espn/"
+      photoUrl="https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/2ZOZLPVQ4NC5VOBUIY3HGTJDHU.jpg"
+      headline="Football kicks off season at Ivy League Media Day hosted by ESPN"
+    />
+    <Article
+      link="https://www.columbiaspectator.com/sports/2019/08/17/football-kicks-off-season-at-ivy-league-media-day-hosted-by-espn/"
+      photoUrl="https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/2ZOZLPVQ4NC5VOBUIY3HGTJDHU.jpg"
+      headline="Football kicks off season at Ivy League Media Day hosted by ESPN"
+    />
+    <Article
+      link="https://www.columbiaspectator.com/sports/2019/08/17/football-kicks-off-season-at-ivy-league-media-day-hosted-by-espn/"
+      photoUrl="https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/2ZOZLPVQ4NC5VOBUIY3HGTJDHU.jpg"
+      headline="Football kicks off season at Ivy League Media Day hosted by ESPN"
+    />
+    <Article
+      link="https://www.columbiaspectator.com/sports/2019/08/17/football-kicks-off-season-at-ivy-league-media-day-hosted-by-espn/"
+      photoUrl="https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/2ZOZLPVQ4NC5VOBUIY3HGTJDHU.jpg"
+      headline="Football kicks off season at Ivy League Media Day hosted by ESPN"
+    />
+  </DiscourseContainer>
 ));
