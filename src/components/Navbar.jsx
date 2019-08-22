@@ -3,6 +3,7 @@ import { HashLink as Link } from 'react-router-hash-link';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { slide as Menu } from 'react-burger-menu';
+import { Desktop, MobileAndTablet } from 'react-responsive-simple';
 
 const NavBarContainer = styled.div`
   display: flex;
@@ -24,14 +25,9 @@ const NavBarEntry = styled.div`
   text-align: center;
 `;
 
-const NavBarText = styled.div`
-  font-size: 1.3rem;
+const NavBarText = styled.h3`
   color: white;
-  font-weight: 700;
   @media (max-width: 992px) {
-    font-size: 1.3rem;
-    color: white;
-    font-weight: 700;
     padding-bottom: 2vh;
   }
 `;
@@ -76,26 +72,27 @@ export default class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isDesktop: false,
+      menuOpen: false,
     };
-    this.checkWindow = this.checkWindow.bind(this);
+
+    this.closeMenu = this.closeMenu.bind(this);
+    this.handleStateChange = this.handleStateChange.bind(this);
   }
 
-  componentDidMount() {
-    this.checkWindow();
-    window.addEventListener('resize', this.checkWindow);
+  closeMenu() {
+    this.setState({ menuOpen: false });
   }
 
-  checkWindow = () => {
-    this.setState({ isDesktop: window.innerWidth > 992 });
-  };
+  handleStateChange(state) {
+    this.setState({ menuOpen: state.isOpen });
+  }
 
   render() {
-    const { isDesktop } = this.state;
     const { entries } = this.props;
+    const { menuOpen } = this.state;
     return (
       <div>
-        {isDesktop ? (
+        <Desktop>
           <NavBarContainer>
             {entries.map((entry) => {
               const linkUrL = `#${entry}`;
@@ -109,10 +106,19 @@ export default class Navbar extends Component {
             })}
             <ColumbiaSpectator>*insert the logo here*</ColumbiaSpectator>
           </NavBarContainer>
-        ) : (
+        </Desktop>
+
+        <MobileAndTablet>
           <NavBarContainer>
             <BurgerContainer>
-              <Menu right noOverlay width="250px" styles={burgerStyle}>
+              <Menu
+                right
+                noOverlay
+                width="250px"
+                styles={burgerStyle}
+                isOpen={menuOpen}
+                onStateChange={(state) => this.handleStateChange(state)}
+              >
                 {entries.map((entry) => {
                   const linkUrL = `#${entry}`;
                   return (
@@ -121,6 +127,7 @@ export default class Navbar extends Component {
                         smooth
                         to={linkUrL}
                         style={{ textDecoration: 'none', color: 'white' }}
+                        onClick={this.closeMenu}
                       >
                         <NavBarText>{entry}</NavBarText>
                       </Link>
@@ -130,7 +137,7 @@ export default class Navbar extends Component {
               </Menu>
             </BurgerContainer>
           </NavBarContainer>
-        )}
+        </MobileAndTablet>
       </div>
     );
   }

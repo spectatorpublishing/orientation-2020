@@ -33,6 +33,15 @@ export default class Orientation extends Component {
   };
 
   render() {
+    const NavBarEntries = [
+      'HOME',
+      'CLUBS',
+      'REGISTRATION',
+      'GET TO KNOW BARNUMBIA',
+      'MAPS',
+      '116 TRADITIONS',
+      'JOIN SPEC',
+    ];
     return (
       <Container>
         <Row>
@@ -40,17 +49,7 @@ export default class Orientation extends Component {
             <WelcomeContainer>
               <div style={{ height: '100vh', width: '100vw' }}>
                 {' '}
-                <Navbar
-                  entries={[
-                    'HOME',
-                    'CLUBS',
-                    'REGISTRATION',
-                    'GET TO KNOW BARNUMBIA',
-                    'MAPS',
-                    '116 TRADITIONS',
-                    'JOIN SPEC',
-                  ]}
-                />
+                <Navbar entries={NavBarEntries} />
                 <TableOfContents entries={this.generateEntries()} />
                 {' '}
               </div>
