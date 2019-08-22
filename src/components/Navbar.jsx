@@ -5,19 +5,26 @@ import styled from 'styled-components';
 import { slide as Menu } from 'react-burger-menu';
 import { Desktop, MobileAndTablet } from 'react-responsive-simple';
 
+const theme = require('../GlobalStyles');
+
 const NavBarContainer = styled.div`
   display: flex;
   flex-direction: inline-row;
   height: 6vh;
   width: 100vw;
-  background-color: black;
+  background: black;
   justify-content: space-around;
   align-items: center;
+
   @media (max-width: 992px) {
     display: flex;
     align-items: center;
     height: 60px;
     width: 100vw;
+  }
+
+  @media only screen and (max-height: 992px) {
+    height: 60px;
   }
 `;
 
@@ -25,14 +32,15 @@ const NavBarEntry = styled.div`
   text-align: center;
 `;
 
-const theme = require('../GlobalStyles');
-
 const NavBarText = styled.h3`
   color: white;
   font-size: 2.1em;
-
   @media (max-width: 1350px) {
-    font-size: 1.5em;
+    height: auto;
+    font-size: 2.1em;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    line-height: 0.8;
   }
   @media (max-width: ${theme.large}) {
     padding-bottom: 2vh;
@@ -47,6 +55,10 @@ const ColumbiaSpectator = styled.div`
   background-size: cover;
   height: 6vh;
   width: 16vw;
+
+  @media only screen and (max-height: 992px) {
+    height: 60px;
+  }
 `;
 
 const BurgerContainer = styled.div`
