@@ -49,7 +49,7 @@ const burgerStyle = {
     position: 'relative',
     width: '35px',
     height: '30px',
-    left: '40vw',
+    left: '80vw',
     top: '0',
   },
   bmBurgerBars: {
