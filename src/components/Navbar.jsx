@@ -27,12 +27,21 @@ const NavBarEntry = styled.div`
 
 const NavBarText = styled.h3`
   color: white;
+  font-size: 2.3rem;
   @media (max-width: 992px) {
     padding-bottom: 2vh;
+    font-size: 2.6rem;
   }
 `;
 
-const ColumbiaSpectator = styled.div``;
+const ColumbiaSpectator = styled.div`
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdHfpvhTURAooEnUy0KdldKLP9OHHbliCo81ZbiN4rtghrH8m5");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 6vh;
+  width: 16vw;
+`;
 
 const BurgerContainer = styled.div`
   display: flex;
@@ -49,12 +58,12 @@ const burgerStyle = {
     top: '0',
   },
   bmBurgerBars: {
-    background: 'red',
+    background: 'white',
   },
   bmMenu: {
     background: 'black',
     padding: '2.5em 1.5em 0',
-    fontSize: '1.15em',
+    fontSize: '1.0em',
   },
   bmCross: {
     background: 'white',
