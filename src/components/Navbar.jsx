@@ -25,10 +25,16 @@ const NavBarEntry = styled.div`
   text-align: center;
 `;
 
+const theme = require('../GlobalStyles');
+
 const NavBarText = styled.h3`
   color: white;
-  font-size: 2.3rem;
-  @media (max-width: 992px) {
+  font-size: 2.1em;
+
+  @media (max-width: 1350px) {
+    font-size: 1.5em;
+  }
+  @media (max-width: ${theme.large}) {
     padding-bottom: 2vh;
     font-size: 2.6rem;
   }
