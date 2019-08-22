@@ -15,7 +15,7 @@ const NavBarContainer = styled.div`
   @media (max-width: 992px) {
     display: flex;
     align-items: center;
-    height: 8vh;
+    height: 60px;
     width: 100vw;
   }
 `;
@@ -49,7 +49,7 @@ const burgerStyle = {
     position: 'relative',
     width: '35px',
     height: '30px',
-    left: '80vw',
+    left: '85vw',
     top: '0',
   },
   bmBurgerBars: {
