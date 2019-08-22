@@ -20,7 +20,6 @@ const bannerButtonDemo = {
   textColor: "#174d5b"
 };
 
-
 storiesOf("Section", module).add("with member information", () => (
   <SectionTitle title={sectionDemo.title} members={sectionDemo.members} />
 ));
