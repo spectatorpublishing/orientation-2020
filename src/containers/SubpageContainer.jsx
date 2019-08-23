@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Desktop } from 'react-responsive-simple';
 import PropTypes from 'prop-types';
-import Article from '../components/Article';
+import StylizedArticle from '../components/StylizedArticle';
 
 const OuterContainer = styled.div``;
 
@@ -49,7 +49,7 @@ const Subpage = (props) => {
         <InnerContainer>
           <SectionRow>
             {data.map((article) => (
-              <Article
+              <StylizedArticle
                 link={article.link}
                 photoUrl={article.photoUrl}
                 photoAlt={article.photoAlt}

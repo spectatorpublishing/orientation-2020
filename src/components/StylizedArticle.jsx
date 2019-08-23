@@ -8,11 +8,20 @@ const Container = styled.a`
 `;
 
 const Headline = styled.h4`
-  margin-top: 1rem;
+  color: black;
+  padding: 1.5rem;
 `;
 
 const Image = styled.img`
   max-width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+`;
+
+const Footer = styled.div`
+  background: #9193c8;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 `;
 
 function Article({
@@ -21,7 +30,9 @@ function Article({
   return (
     <Container href={link} target="_blank">
       <Image alt={photoAlt} src={photoUrl} />
-      <Headline>{headline}</Headline>
+      <Footer>
+        <Headline>{headline}</Headline>
+      </Footer>
     </Container>
   );
 }
