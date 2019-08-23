@@ -13,13 +13,14 @@ const Headline = styled.h4`
 `;
 
 const Image = styled.img`
+  display: block;
   max-width: 100%;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 `;
 
 const Footer = styled.div`
-  background: #9193c8;
+  background: #62a8e5;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 `;
