@@ -70,7 +70,7 @@ const DividerWithNames = (props) => {
     title, body, link, recognition,
   } = props;
   const defaultBody = (
-    <>
+    <div>
       <BodyText>
         This website was created entirely by our tech and design teams here at
         Spectator.
@@ -85,7 +85,7 @@ const DividerWithNames = (props) => {
         <Anchor href={link}>Click here</Anchor>
         <BodyText> to learn how to join our team</BodyText>
       </BodyText>
-    </>
+    </div>
   );
   const bodyToShow = body || defaultBody;
   return (

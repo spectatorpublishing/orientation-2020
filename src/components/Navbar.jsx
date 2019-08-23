@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { slide as Menu } from 'react-burger-menu';
@@ -29,9 +28,10 @@ const NavBarEntry = styled.div`
   text-align: center;
 `;
 
-const NavBarText = styled.h3`
+const NavBarText = styled.a`
   color: white;
   font-size: 2.1em;
+  font-family: "HalloEuroboy", sans-serif;
   @media (max-width: 1350px) {
     height: auto;
     font-size: 2.1em;
@@ -119,12 +119,20 @@ export default class Navbar extends Component {
         <Desktop>
           <NavBarContainer>
             {entries.map((entry) => {
-              const linkUrL = `#${entry}`;
+              const linkUrL = entry.linkUrl;
+              const { title } = entry;
               return (
                 <NavBarEntry>
-                  <Link smooth to={linkUrL} style={{ textDecoration: 'none' }}>
-                    <NavBarText>{entry}</NavBarText>
-                  </Link>
+                  <NavBarText
+                    href={linkUrL}
+                    target="_blank"
+                    rel="noopener noreferrer" // set to avoid potential data breach on the original page side;
+                    // "noopener" denies access of the new page to the original,
+                    // "noreferrer" prevents browser from sending original page address as referrer
+                    style={{ textDecoration: 'none' }}
+                  >
+                    {title}
+                  </NavBarText>
                 </NavBarEntry>
               );
             })}
@@ -144,17 +152,18 @@ export default class Navbar extends Component {
                 onStateChange={(state) => this.handleStateChange(state)}
               >
                 {entries.map((entry) => {
-                  const linkUrL = `#${entry}`;
+                  const linkUrL = entry.linkUrl;
+                  const { title } = entry;
                   return (
                     <NavBarEntry>
-                      <Link
-                        smooth
-                        to={linkUrL}
-                        style={{ textDecoration: 'none', color: 'white' }}
-                        onClick={this.closeMenu}
+                      <NavBarText
+                        href={linkUrL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: 'none' }}
                       >
-                        <NavBarText>{entry}</NavBarText>
-                      </Link>
+                        {title}
+                      </NavBarText>
                     </NavBarEntry>
                   );
                 })}
@@ -168,7 +177,7 @@ export default class Navbar extends Component {
 }
 
 Navbar.propTypes = {
-  entries: PropTypes.arrayOf(PropTypes.string),
+  entries: PropTypes.arrayOf(PropTypes.object),
 };
 
 Navbar.defaultProps = {
