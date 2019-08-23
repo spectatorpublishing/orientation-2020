@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { Desktop, MobileAndTablet } from 'react-responsive-simple';
+import { Desktop, ResponsiveComponent } from 'react-responsive-simple';
 import TableOfContents from '../components/TableOfContents';
 import { theme } from '../GlobalStyles';
 
@@ -9,17 +9,18 @@ const photoUrl = 'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/pu
 const opaqueUrl = 'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/ZNKTNLGKAFHUTFSIXC4HFO3OR4.jpeg';
 
 const Container = styled.div`
-  height: 100vh;
-  @media (max-width: ${theme.medium}) {
+  height: auto;
+  @media (max-width: ${theme.large}) {
     height: auto;
     background-image: url(${opaqueUrl});
   }
+  overflow: hidden;
 `;
 
 const Row = styled.div`
   display: flex;
   flex-direction: row;
-  height: 100vh;
+  min-height: 100vh;
 `;
 
 const Column = styled.div`
@@ -31,7 +32,7 @@ const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 3.5vh 5vw 0vh 5vw;
-  @media (max-width: ${theme.medium}) {
+  @media (max-width: ${theme.large}) {
     margin-top: 0vh;
     text-align: center;
   }
@@ -39,8 +40,7 @@ const TextContainer = styled.div`
 
 const OrientationImageContainer = styled.div`
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  height: 0;
 `;
 const OrientationImage = styled.img`
   object-fit: contain;
@@ -55,7 +55,7 @@ const Italicized = styled.h5`
 `;
 
 const Title = styled.h1`
-  @media (max-width: ${theme.medium}) {
+  @media (max-width: ${theme.large}) {
     margin-top: 20vh;
     font-size: 5rem;
   }
@@ -63,7 +63,7 @@ const Title = styled.h1`
 
 const Subtitle = styled.h2`
   margin-top: -2vh;
-  @media (max-width: ${theme.medium}) {
+  @media (max-width: ${theme.large}) {
     font-size: 4rem;
   }
 `;
@@ -93,7 +93,7 @@ const WelcomeContainer = (props) => {
           </Row>
         </Container>
       </Desktop>
-      <MobileAndTablet>
+      <ResponsiveComponent max={1100}>
         <Container>
           <TextContainer>
             <Title>WELCOME</Title>
@@ -104,7 +104,7 @@ const WelcomeContainer = (props) => {
           </TextContainer>
           <TableOfContents entries={tocEntries} />
         </Container>
-      </MobileAndTablet>
+      </ResponsiveComponent>
     </>
   );
 };
