@@ -13,7 +13,7 @@ const NavBarContainer = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  & :first-child {
+  & > :first-child {
     margin-left: 2vw;
   }
 
@@ -50,14 +50,21 @@ const NavBarText = styled.a`
   }
 `;
 
-const ColumbiaSpectator = styled.div`
+const ColumbiaSpectatorContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: ${theme.orange};
+  height: 100%;
+  width: 10vw;
+`;
+
+const ColumbiaSpectator = styled.div`
   background-image: url("https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/ZKALKJLFQFECNGLNTICSJUMFF4.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  height: 6vh;
-  width: 10vw;
+  width: 80%;
 
   @media only screen and (max-height: ${theme.large}) {
     height: 60px;
@@ -142,7 +149,9 @@ export default class Navbar extends Component {
                 </NavBarEntry>
               );
             })}
-            <ColumbiaSpectator />
+            <ColumbiaSpectatorContainer>
+              <ColumbiaSpectator />
+            </ColumbiaSpectatorContainer>
           </NavBarContainer>
         </Desktop>
 
