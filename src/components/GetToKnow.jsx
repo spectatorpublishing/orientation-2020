@@ -4,27 +4,28 @@ import PropTypes from 'prop-types';
 import Button from './Button';
 
 const Container = styled.div`
-  width: 100%;
-  height: 15%;
-  background-color: grey;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   background-image: url(${(props) => props.backgroundImage.image});
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 50% 85%;
+  padding: 3vw;
+  position: relative;
+  overflow: hidden;
 `;
 
 const Column = styled.div`
-  max-width: 50%;
-  height: 100%;
+  float: right;
 `;
 
-const Title = styled.div`
-  margin-bottom: 50%;
-  margin-top: 20%;
-  font: 170% arial, sans-serif;
-  color: black;
+const Title = styled.h2`
+  margin-left: 4vw;
   text-shadow: -1px 3px white;
   font-weight: bold;
+  color: #e27400;
+  margin-top: 1rem;
 `;
 
 const GetToKnow = (props) => {

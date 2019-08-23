@@ -3,26 +3,44 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const Button = styled.a`
+  position: relative;
   display: flex;
   flex-wrap: nowrap;
   align-content: space-evenly;
   justify-content: center;
-  border-radius: 3px;
-  padding: 0.1rem;
   margin: 1rem;
-  outline: 0.2rem solid red;
-  outline-offset: 1rem 5rem;
   text-decoration: none;
-  transform: translate(-15%, 25%);
 `;
 
 const Inner = styled.div`
-  padding: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  position: relative;
   :hover {
-    background-color: lightblue;
+    transform: translate(5%, -5%);
   }
   background-color: white;
-  transform: translate(15%, -25%);
+  color: #f57869;
+  font-weight: bold;
+  :before {
+    display: block;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #e27400;
+    left: -0.4rem;
+    top: 0.2rem;
+  }
+  :after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    height: 1px;
+    width: 500%;
+    background: #e27400;
+    left: 100%;
+  }
 `;
 
 const Buttons = (props) => {

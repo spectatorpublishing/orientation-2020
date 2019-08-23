@@ -34,7 +34,7 @@ storiesOf("Section", module).add("with member information", () => (
 
 const backgroundImage = {
   image:
-    "https://cdn.pixabay.com/photo/2017/04/25/23/14/columbia-2261135_960_720.jpg"
+    "https://spectator.arcpublishing.com/photo/resize/6OpqLabVVWxuYjOPt8GHrrT9CIE=/arc-anglerfish-arc2-prod-spectator/ZNKTNLGKAFHUTFSIXC4HFO3OR4.jpeg"
 };
 const getToKnow = [
   {
