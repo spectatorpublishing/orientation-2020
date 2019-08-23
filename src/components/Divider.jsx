@@ -32,7 +32,7 @@ const Body = styled.div`
   padding-right: 4rem;
   line-height: 1.3vw;
   @media (max-width: 500px) {
-    line-height: 4px;
+    line-height: 5px;
   }
 `;
 
@@ -48,12 +48,6 @@ const Anchor = styled.a`
   color: inherit;
 `;
 
-const HR = styled.hr`
-  visibility: hidden;
-  height: 2px;
-  margin: -0.25vw;
-`;
-
 const Divider = (props) => {
   const { title, body, link } = props;
   const defaultBody = (
@@ -62,9 +56,9 @@ const Divider = (props) => {
         This website was created entirely by our tech and design teams here at
         Spectator. Curious to see how it&apos;s done?
       </BodyText>
-      <HR />
+      <br />
       <BodyText>Interested in doing this work yourself? </BodyText>
-      <HR />
+      <br />
       <BodyText>
         <Anchor href={link}>Click here</Anchor>
         <BodyText> to learn how to join our team</BodyText>
