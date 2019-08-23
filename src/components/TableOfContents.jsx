@@ -18,7 +18,7 @@ const Container = styled.div`
   justify-content: flex-end;
   @media (max-width: ${theme.large}) {
     margin-top: 5vh;
-    margin-right: 11vw;
+    margin-right: 8vw;
     padding-bottom: 3vh;
   }
 `;
@@ -33,7 +33,7 @@ const Border = styled.div`
 const TableEntry = styled.div`
   padding-bottom: 3vh;
   text-align: right;
-  padding-right: 1.5vw;
+  padding-right: 1vw;
   color: red;
   @media (max-width: ${theme.large}) {
     padding-bottom: 2vh;
@@ -41,9 +41,10 @@ const TableEntry = styled.div`
 `;
 
 const TableText = styled.p`
-  font-size: 2vh;
+  font-size: 2.2vh;
   @media (max-width: ${theme.large}) {
-    margin-right: 5vw;
+    text-shadow: 2px 2px 4px white;
+    margin-right: 2.5vw;
     font-size: 1.4rem;
   }
 `;
@@ -63,7 +64,7 @@ const TableOfContents = (props) => {
     <Container>
       <Table>
         {entries.map((entry) => {
-          const linkUrL = `#${entry}`;
+          const linkUrL = `#${entry.id}`;
           return (
             <TableEntry>
               <Link
@@ -82,7 +83,7 @@ const TableOfContents = (props) => {
                   changeTextColor(linkUrL, false);
                 }}
               >
-                <TableText>{entry}</TableText>
+                <TableText>{entry.title}</TableText>
               </Link>
             </TableEntry>
           );
@@ -94,7 +95,7 @@ const TableOfContents = (props) => {
 };
 
 TableOfContents.propTypes = {
-  entries: PropTypes.arrayOf(PropTypes.string),
+  entries: PropTypes.arrayOf(PropTypes.object),
 };
 
 TableOfContents.defaultProps = {

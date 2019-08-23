@@ -53,12 +53,12 @@ const Title = styled.h2`
 `;
 
 const StaffContainer = (props) => {
-  const { staffInfo } = props;
+  const { id, staffInfo } = props;
 
   return (
     <div>
       <MobileAndTablet>
-        <Container>
+        <Container id={id}>
           <Row>
             <TitleContainer>
               <Title>Staff</Title>
@@ -84,7 +84,7 @@ const StaffContainer = (props) => {
       </MobileAndTablet>
 
       <Desktop>
-        <Container>
+        <Container id={id}>
           <Row>
             <TitleContainer>
               <Title>Staff</Title>
@@ -102,6 +102,7 @@ const StaffContainer = (props) => {
 };
 
 StaffContainer.propTypes = {
+  id: PropTypes.string.isRequired,
   staffInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 

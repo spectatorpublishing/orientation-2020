@@ -7,38 +7,68 @@ import Article from '../components/Article';
 import Divider from '../components/Divider';
 import DividerWithNames from '../components/DividerWithNames';
 import GetToKnow from '../components/GetToKnow';
+import JoinTheDiscourseData from '../data/JoinTheDiscourseData';
 
 const tocEntries = [
-  'Campus Life',
-  'Academics',
-  'Courses We Loved',
-  '116 Things to do before Graduating',
-  'Get Your Textbooks',
-  'Maps',
-  'Stories To Follow',
-  'Join the Discourse',
-  'Spectator Staff',
+  {
+    title: 'Campus Life',
+    id: 'gettoknow',
+  },
+  {
+    title: 'Academics',
+    id: 'gettoknow',
+  },
+  {
+    title: 'Courses We Loved',
+    id: 'banner',
+  },
+  {
+    title: '116 Things to do before Graduating',
+    id: 'banner',
+  },
+  {
+    title: 'Required Reading',
+    id: 'banner',
+  },
+  {
+    title: 'Maps',
+    id: 'maps',
+  },
+  {
+    title: 'Stories to Follow',
+    id: 'stories',
+  },
+  {
+    title: 'Join the Discourse',
+    id: 'discourse',
+  },
+  {
+    title: 'Spectator Staff',
+    id: 'staff',
+  },
 ];
 
 const BannerRowDemo = [
   {
     title: 'COURSES WE LOVED',
-    url: 'https://www.columbiaspectator.com/',
+    url:
+      'https://www.columbiaspectator.com/spectrum/2019/08/22/courses-we-loved-staff-picks-for-2019/',
   },
   {
     title: 'PREPARE FOR COURSE REGISTRATION DOWNLOAD VERGIL+',
-    url: 'https://www.columbiaspectator.com/',
+    url:
+      'https://www.columbiaspectator.com/spectrum/2018/04/30/vergils-debut-how-to-make-registration-a-piece-of-cake/',
     color: '#174d5b',
   },
   {
     title: '116 THINGS TO DO BEFORE GRADUATING',
-    url: 'https://www.columbiaspectator.com/',
+    url: 'https://www.columbiaspectator.com/orientation-2018/116-traditions/',
     color: '#f26d5b',
     shadowColor: '#f1bc9c',
   },
   {
-    title: 'GET YOUR TEXTBOOKS',
-    url: 'https://www.columbiaspectator.com/',
+    title: 'REQUIRED READING',
+    url: 'https://www.columbiaspectator.com/spectrum/required-reading/',
     color: '#9BDAE3',
   },
 ];
@@ -174,15 +204,15 @@ const getToKnowImage = {
 const getToKnow = [
   {
     tab: 'BARNUMBIA',
-    tabLink: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    tabLink: '/#/barnumbia',
   },
   {
     tab: 'CAMPUS LIFE',
-    tabLink: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    tabLink: '/#/campus',
   },
   {
     tab: 'ACADEMICS',
-    tabLink: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+    tabLink: '/#/registration',
   },
 ];
 
@@ -194,29 +224,24 @@ const Orientation = () => (
       body={false}
       link="//columbiaspectator.com"
     />
-    <GetToKnow getToKnow={getToKnow} backgroundImage={getToKnowImage} />
-    <BannerRow buttons={BannerRowDemo} mobileButtons={MobileBannerRowDemo} />
-    <DiscourseContainer>
-      <Article
-        link="https://www.columbiaspectator.com/sports/2019/08/17/football-kicks-off-season-at-ivy-league-media-day-hosted-by-espn/"
-        photoUrl="https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/2ZOZLPVQ4NC5VOBUIY3HGTJDHU.jpg"
-        headline="Football kicks off season at Ivy League Media Day hosted by ESPN"
-      />
-      <Article
-        link="https://www.columbiaspectator.com/sports/2019/08/17/football-kicks-off-season-at-ivy-league-media-day-hosted-by-espn/"
-        photoUrl="https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/2ZOZLPVQ4NC5VOBUIY3HGTJDHU.jpg"
-        headline="Football kicks off season at Ivy League Media Day hosted by ESPN"
-      />
-      <Article
-        link="https://www.columbiaspectator.com/sports/2019/08/17/football-kicks-off-season-at-ivy-league-media-day-hosted-by-espn/"
-        photoUrl="https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/2ZOZLPVQ4NC5VOBUIY3HGTJDHU.jpg"
-        headline="Football kicks off season at Ivy League Media Day hosted by ESPN"
-      />
-      <Article
-        link="https://www.columbiaspectator.com/sports/2019/08/17/football-kicks-off-season-at-ivy-league-media-day-hosted-by-espn/"
-        photoUrl="https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/2ZOZLPVQ4NC5VOBUIY3HGTJDHU.jpg"
-        headline="Football kicks off season at Ivy League Media Day hosted by ESPN"
-      />
+    <GetToKnow
+      id="gettoknow"
+      getToKnow={getToKnow}
+      backgroundImage={getToKnowImage}
+    />
+    <BannerRow
+      id="banner"
+      buttons={BannerRowDemo}
+      mobileButtons={MobileBannerRowDemo}
+    />
+    <DiscourseContainer id="discourse">
+      {JoinTheDiscourseData.map((entry) => (
+        <Article
+          link={entry.link}
+          photoUrl={entry.photoUrl}
+          headline={entry.headline}
+        />
+      ))}
     </DiscourseContainer>
     <DividerWithNames
       title="LIKE WHAT YOU SEE?"
@@ -224,7 +249,7 @@ const Orientation = () => (
       link="//columbiaspectator.com"
       recognition={recognition}
     />
-    <StaffContainer staffInfo={StaffInfo} />
+    <StaffContainer id="staff" staffInfo={StaffInfo} />
   </div>
 );
 
