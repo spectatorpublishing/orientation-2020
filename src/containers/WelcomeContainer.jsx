@@ -1,9 +1,20 @@
-import styled from 'styled-components';
 import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { Desktop, MobileAndTablet } from 'react-responsive-simple';
 import TableOfContents from '../components/TableOfContents';
+import { theme } from '../GlobalStyles';
 
-const Container = styled.div``;
+const photoUrl = 'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/KPXXJFOVYRHR5HPKJ76CND2574.jpg';
+const opaqueUrl = 'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/ZNKTNLGKAFHUTFSIXC4HFO3OR4.jpeg';
+
+const Container = styled.div`
+  height: 100vh;
+  @media (max-width: ${theme.medium}) {
+    height: auto;
+    background-image: url(${opaqueUrl});
+  }
+`;
 
 const Row = styled.div`
   display: flex;
@@ -20,52 +31,81 @@ const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 3.5vh 5vw 0vh 5vw;
+  @media (max-width: ${theme.medium}) {
+    margin-top: 0vh;
+    text-align: center;
+  }
 `;
 
 const OrientationImageContainer = styled.div`
   width: 100%;
   height: 100%;
+  overflow: hidden;
 `;
 const OrientationImage = styled.img`
-  object-fit: cover;
+  object-fit: contain;
   width: 100%;
   min-height: 100%;
 `;
 
-const Italicized = styled.p`
+const Italicized = styled.h5`
   margin-top: 0.5rem;
   font-style: italic;
-  font-size: 200;
+  font-weight: lighter;
+`;
+
+const Title = styled.h1`
+  @media (max-width: ${theme.medium}) {
+    margin-top: 20vh;
+    font-size: 5rem;
+  }
 `;
 
 const Subtitle = styled.h2`
   margin-top: -2vh;
+  @media (max-width: ${theme.medium}) {
+    font-size: 4rem;
+  }
 `;
-
-const tempUrl = 'https://d.newsweek.com/en/full/465055/05-31-nayla-kidd-columbia-01.jpg';
 
 const WelcomeContainer = (props) => {
   const { tocEntries } = props;
   return (
-    <Container>
-      <Row>
-        <Column>
+    <>
+      <Desktop>
+        <Container>
+          <Row>
+            <Column>
+              <TextContainer>
+                <Title>WELCOME</Title>
+                <Subtitle>CLASS OF 2023</Subtitle>
+                <Italicized>
+                  Select an option below to explore your orientation guide
+                </Italicized>
+              </TextContainer>
+              <TableOfContents entries={tocEntries} />
+            </Column>
+            <Column>
+              <OrientationImageContainer>
+                <OrientationImage src={photoUrl} />
+              </OrientationImageContainer>
+            </Column>
+          </Row>
+        </Container>
+      </Desktop>
+      <MobileAndTablet>
+        <Container>
           <TextContainer>
-            <h1>WELCOME</h1>
+            <Title>WELCOME</Title>
             <Subtitle>CLASS OF 2023</Subtitle>
             <Italicized>
               Select an option below to explore your orientation guide
             </Italicized>
           </TextContainer>
           <TableOfContents entries={tocEntries} />
-        </Column>
-        <Column>
-          <OrientationImageContainer>
-            <OrientationImage src={tempUrl} />
-          </OrientationImageContainer>
-        </Column>
-      </Row>
-    </Container>
+        </Container>
+      </MobileAndTablet>
+    </>
   );
 };
 

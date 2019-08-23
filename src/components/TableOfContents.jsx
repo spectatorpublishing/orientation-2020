@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import PropTypes from 'prop-types';
+import { theme } from '../GlobalStyles';
 
 const Table = styled.div`
   display: flex;
@@ -15,6 +16,11 @@ const Container = styled.div`
   margin-top: 5vh;
   margin-right: 4vw;
   justify-content: flex-end;
+  @media (max-width: ${theme.medium}) {
+    margin-top: 5vh;
+    margin-right: 11vw;
+    padding-bottom: 3vh;
+  }
 `;
 
 const Border = styled.div`
@@ -29,6 +35,15 @@ const TableEntry = styled.div`
   text-align: right;
   padding-right: 1.5vw;
   color: red;
+  @media (max-width: ${theme.medium}) {
+    padding-bottom: 2vh;
+  }
+`;
+
+const TableText = styled.p`
+  @media (max-width: ${theme.medium}) {
+    margin-right: 5vw;
+  }
 `;
 
 const changeTextColor = (id, isActive) => {
@@ -65,7 +80,7 @@ const TableOfContents = (props) => {
                   changeTextColor(linkUrL, false);
                 }}
               >
-                <p>{entry}</p>
+                <TableText>{entry}</TableText>
               </Link>
             </TableEntry>
           );
