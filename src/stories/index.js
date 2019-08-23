@@ -7,6 +7,7 @@ import BannerButton from "../components/BannerButton.jsx";
 import MapsList from "../components/MapsList.jsx";
 import Article from "../components/Article";
 import DiscourseContainer from "../components/DiscourseContainer";
+import Divider from "../components/Divider";
 
 const sectionDemo = {
   title: "demo title",
@@ -89,4 +90,12 @@ storiesOf("Discourse Container", module).add("With Articles", () => (
       headline="Football kicks off season at Ivy League Media Day hosted by ESPN"
     />
   </DiscourseContainer>
+));
+
+storiesOf("Divider", module).add("Default", () => (
+  <Divider
+    title="LIKE WHAT YOU SEE?"
+    body={false}
+    link="//columbiaspectator.com"
+  />
 ));
