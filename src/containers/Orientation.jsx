@@ -3,7 +3,6 @@ import WelcomeContainer from './WelcomeContainer';
 import BannerRow from './BannerRow';
 import StaffContainer from './StaffContainer';
 import DiscourseContainer from './DiscourseContainer';
-import Navbar from '../components/Navbar';
 import Article from '../components/Article';
 
 const tocEntries = [
@@ -163,19 +162,8 @@ const StaffInfo = [
   },
 ];
 
-const navBarEntries = [
-  'HOME',
-  'CLUBS',
-  'REGISTRATION',
-  'GET TO KNOW BARNUMBIA',
-  'MAPS',
-  '116 TRADITIONS',
-  'JOIN SPEC',
-];
-
 const Orientation = () => (
   <div>
-    <Navbar entries={navBarEntries} />
     <WelcomeContainer id="welcome" tocEntries={tocEntries} />
     <BannerRow buttons={BannerRowDemo} mobileButtons={MobileBannerRowDemo} />
     <DiscourseContainer>
