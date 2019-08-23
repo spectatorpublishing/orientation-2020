@@ -9,6 +9,7 @@ import Article from "../components/Article";
 import DiscourseContainer from "../components/DiscourseContainer";
 import Divider from "../components/Divider";
 import DividerWithNames from "../components/DividerWithNames";
+import GetToKnow from "../components/GetToKnow";
 
 const sectionDemo = {
   title: "demo title",
@@ -110,4 +111,27 @@ storiesOf("DividerWithNames", module).add("Default", () => (
     link="//columbiaspectator.com"
     recognition={recognition}
   />
+));
+
+const backgroundImage = {
+  image:
+    "https://spectator.arcpublishing.com/photo/resize/6OpqLabVVWxuYjOPt8GHrrT9CIE=/arc-anglerfish-arc2-prod-spectator/ZNKTNLGKAFHUTFSIXC4HFO3OR4.jpeg"
+};
+const getToKnow = [
+  {
+    tab: "BARNUMBIA",
+    tabLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  },
+  {
+    tab: "CAMPUS LIFE",
+    tabLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  },
+  {
+    tab: "ACADEMICS",
+    tabLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  }
+];
+
+storiesOf("GetToKnow", module).add("GetToKnow", () => (
+  <GetToKnow getToKnow={getToKnow} backgroundImage={backgroundImage} />
 ));

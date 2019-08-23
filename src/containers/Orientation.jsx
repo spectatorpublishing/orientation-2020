@@ -6,6 +6,7 @@ import DiscourseContainer from './DiscourseContainer';
 import Article from '../components/Article';
 import Divider from '../components/Divider';
 import DividerWithNames from '../components/DividerWithNames';
+import GetToKnow from '../components/GetToKnow';
 
 const tocEntries = [
   'Campus Life',
@@ -166,6 +167,25 @@ const StaffInfo = [
 
 const recognition = 'COVER ART BY: JOURNALISM DESIGNER WEBSITE DESIGN BY: CECILIA ORDUÑA DEVELOPED BY: ARSALAAN ANSARI, WILLIAM CHIU, HARRISON WANG, HARRISON WANG, BILL CHEN & CHENOA BUNTS-ANDERSON';
 
+const getToKnowImage = {
+  image:
+    'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/ZNKTNLGKAFHUTFSIXC4HFO3OR4.jpeg',
+};
+const getToKnow = [
+  {
+    tab: 'BARNUMBIA',
+    tabLink: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+  },
+  {
+    tab: 'CAMPUS LIFE',
+    tabLink: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+  },
+  {
+    tab: 'ACADEMICS',
+    tabLink: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+  },
+];
+
 const Orientation = () => (
   <div>
     <WelcomeContainer id="welcome" tocEntries={tocEntries} />
@@ -174,6 +194,7 @@ const Orientation = () => (
       body={false}
       link="//columbiaspectator.com"
     />
+    <GetToKnow getToKnow={getToKnow} backgroundImage={getToKnowImage} />
     <BannerRow buttons={BannerRowDemo} mobileButtons={MobileBannerRowDemo} />
     <DiscourseContainer>
       <Article
