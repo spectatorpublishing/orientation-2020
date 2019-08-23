@@ -1,8 +1,20 @@
 import styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Desktop, MobileAndTablet } from 'react-responsive-simple';
+import { Mobile, ResponsiveComponent } from 'react-responsive-simple';
 import SectionTitle from '../components/SectionTitle';
+
+const DesktopAndTablet = (props) => {
+  const { children } = props;
+  return <ResponsiveComponent min={768}>{children}</ResponsiveComponent>;
+};
+
+DesktopAndTablet.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+};
 
 const Container = styled.div`
   display: flex;
@@ -57,7 +69,7 @@ const StaffContainer = (props) => {
 
   return (
     <div>
-      <MobileAndTablet>
+      <Mobile>
         <Container>
           <Row>
             <TitleContainer>
@@ -81,9 +93,9 @@ const StaffContainer = (props) => {
             </Col>
           </SectionRow>
         </Container>
-      </MobileAndTablet>
+      </Mobile>
 
-      <Desktop>
+      <DesktopAndTablet>
         <Container>
           <Row>
             <TitleContainer>
@@ -96,7 +108,7 @@ const StaffContainer = (props) => {
             ))}
           </SectionRow>
         </Container>
-      </Desktop>
+      </DesktopAndTablet>
     </div>
   );
 };

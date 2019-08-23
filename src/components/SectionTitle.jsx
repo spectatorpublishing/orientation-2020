@@ -7,7 +7,7 @@ const MemberItem = styled.h4`
   text-align: left;
   color: white;
 
-  @media (max-width: ${theme.large}) {
+  @media (max-width: ${theme.medium}) {
     font-size: 2.2vh;
   }
 `;
@@ -22,9 +22,9 @@ const Title = styled.h3`
   height: 7.5vh;
   line-height: 4.5vh;
 
-  @media (max-width: ${theme.large}) {
+  @media (max-width: ${theme.medium}) {
     height: 7vh;
-    line-height: 3.8vh;
+    line-height: 3.9vh;
     font-size: 3.9vh;
   }
 `;
@@ -34,7 +34,7 @@ const Container = styled.div`
   background: #106e75;
   flex: 1 1 18%;
 
-  @media (max-width: ${theme.large}) {
+  @media (max-width: ${theme.medium}) {
     height: 15vh;
     padding: 1.1rem 0.7rem;
   }
