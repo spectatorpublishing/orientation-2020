@@ -1,8 +1,21 @@
 import styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Desktop, MobileAndTablet } from 'react-responsive-simple';
+import { Mobile, ResponsiveComponent } from 'react-responsive-simple';
 import SectionTitle from '../components/SectionTitle';
+import { theme } from '../GlobalStyles';
+
+const DesktopAndTablet = (props) => {
+  const { children } = props;
+  return <ResponsiveComponent min={768}>{children}</ResponsiveComponent>;
+};
+
+DesktopAndTablet.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+};
 
 const Container = styled.div`
   display: flex;
@@ -10,7 +23,11 @@ const Container = styled.div`
   flex: 1;
   background: #106e75;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1.5rem 2.5rem;
+
+  @media (max-width: ${theme.medium}) {
+    padding: 1rem;
+  }
 `;
 
 const Row = styled.div`
@@ -53,12 +70,12 @@ const Title = styled.h2`
 `;
 
 const StaffContainer = (props) => {
-  const { id, staffInfo } = props;
+  const { id, staffInfo, staffInfoMobile } = props;
 
   return (
     <div>
-      <MobileAndTablet>
-        <Container id={id}>
+      <Mobile>
+        <Container>
           <Row>
             <TitleContainer>
               <Title>Staff</Title>
@@ -66,24 +83,24 @@ const StaffContainer = (props) => {
           </Row>
           <SectionRow mobile>
             <Col>
-              {staffInfo
+              {staffInfoMobile
                 .slice(0, Math.floor(staffInfo.length / 2))
                 .map((info) => (
                   <SectionTitle title={info.title} members={info.members} />
                 ))}
             </Col>
             <Col>
-              {staffInfo
-                .slice(Math.floor(staffInfo.length / 2), staffInfo.length)
+              {staffInfoMobile
+                .slice(Math.floor(staffInfo.length / 2), staffInfo.length + 1)
                 .map((info) => (
                   <SectionTitle title={info.title} members={info.members} />
                 ))}
             </Col>
           </SectionRow>
         </Container>
-      </MobileAndTablet>
+      </Mobile>
 
-      <Desktop>
+      <DesktopAndTablet>
         <Container id={id}>
           <Row>
             <TitleContainer>
@@ -96,7 +113,7 @@ const StaffContainer = (props) => {
             ))}
           </SectionRow>
         </Container>
-      </Desktop>
+      </DesktopAndTablet>
     </div>
   );
 };
@@ -104,6 +121,7 @@ const StaffContainer = (props) => {
 StaffContainer.propTypes = {
   id: PropTypes.string.isRequired,
   staffInfo: PropTypes.arrayOf(PropTypes.object).isRequired,
+  staffInfoMobile: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default StaffContainer;

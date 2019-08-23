@@ -10,7 +10,7 @@ const Container = styled.div`
   position: relative;
   margin: 1rem 0rem;
 
-  @media (max-width: 992px) {
+  @media (max-width: ${theme.medium}) {
     width: 80vw;
     height: 25vw;
   }
@@ -27,7 +27,7 @@ const Box = styled.div`
   top: 3%;
   background: ${(props) => props.color};
 
-  @media (max-width: 992px) {
+  @media (max-width: ${theme.medium}) {
     width: 100%;
     height: 100%;
     top: 7%;
@@ -43,7 +43,7 @@ const BoxShadow = styled.div`
   left: 3%;
   border-color: ${(props) => props.shadowColor};
 
-  @media (max-width: 992px) {
+  @media (max-width: ${theme.medium}) {
     width: 98%;
     height: 98%;
   }
@@ -54,7 +54,7 @@ const Title = styled.h3`
   font-size: 3vw;
   color: ${(props) => props.textColor};
   @media (max-width: ${theme.medium}) {
-    font-size: 1.2rem;
+    font-size: 6vw;
   }
 `;
 

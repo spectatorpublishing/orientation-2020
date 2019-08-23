@@ -98,99 +98,176 @@ const MobileBannerRowDemo = [
 
 const StaffInfo = [
   {
-    title: 'Art & Entertainment',
+    title: 'Design',
     members: [
-      'Katherine Gerberich, Editor in Chief',
-      'Rahil Kamath, Managing Editor',
-      'Nima Mozhgani, Publisher',
+      'Michelle Shin, Design Editor',
+      'Kelly Pu, Layout Deputy Editor',
+      'Jason Kao, Eye Graphics Deputy Editor',
+      'Helen Yang, Opinions Illustrations Deputy Editor',
+      'Brenda Huang, Eye Illustrations Deputy Editor',
+      'Tassneen Bashir, Animations Deputy Editor',
+    ],
+  },
+  {
+    title: 'News',
+    members: [
+      'Karen Xia, News Editor',
+      'Valeria Escobar, Deputy News Editor',
+      'Shubham Saharan, Senior Staff Writer',
+      'Emma James, Senior Staff Writer',
+      'Nelson Luna, Staff Writer',
+    ],
+  },
+  {
+    title: 'Opinion',
+    members: [
+      'Kaili Meier, Co-Editorial Page Editor',
+      'Erin Neil, Co-Editorial Page Editor',
+      'Kyra Dawkins, Deputy Editorial Page Editor',
+    ],
+  },
+  {
+    title: 'Arts & Entertainment',
+    members: [
+      'Sarah Beckley, A&E Editor',
+      'Gia Kim, A&E Deputy Editor',
+      'Isabela Espadas Barros Leal, A&E Deputy Editor',
+      'Fonda Shen, A&E Deputy Editor',
+      'Samuel Jones, A&E Deputy Editor',
+      'Alejandra Quintana, A&E Deputy Editor',
+    ],
+  },
+  {
+    title: 'Copy',
+    members: [
+      'Sarah Braka, Deputy Copy Editor',
+      'Eden Teferi, Deputy Copy Editor',
+      'María Thompson, Preslotter',
     ],
   },
   {
     title: 'Product',
     members: [
-      'Kevin Li, Head of Product',
       'Arsalaan Ansari, Head of Engineering',
-      'Cecilia Orduna, Lead Product Designer',
+      'William Chiu, Engineering Manager',
+      'Cecilia Orduña, Lead Product Designer',
+      'Matthew Vanegas, Senior Developer',
+      'Harrison Wang, Developer',
+      'Elaine Wang, Developer',
+      'Chenoa Gale, Developer',
     ],
+  },
+  {
+    title: 'Engagement',
+    members: [
+      'Isabel Jauregui, Engagement Director',
+      'Madison Harden, Senior Engagement Manager',
+      'Hailey Shi, Engagement Manager',
+      'Jake Fisher, Engagement Manager',
+    ],
+  },
+  {
+    title: 'Revenue',
+    members: ['Sarah Peters, Sales Manager', 'Katrina Yin, Growth Manager'],
+  },
+  {
+    title: 'Sports',
+    members: ['Harry Walker, Staff Writer', 'Elizabeth Karpen, Staff Writer'],
+  },
+  {
+    title: 'Spectrum',
+    members: ['Grace Lin, Spectrum Editor'],
+  },
+  {
+    title: 'Photo',
+    members: ['Natalie Guerra, Photo Editor'],
+  },
+];
+
+const StaffInfoMobile = [
+  {
+    title: 'Design',
+    members: [
+      'Michelle Shin, Design Editor',
+      'Kelly Pu, Layout Deputy Editor',
+      'Jason Kao, Eye Graphics Deputy Editor',
+      'Helen Yang, Opinions Illustrations Deputy Editor',
+      'Brenda Huang, Eye Illustrations Deputy Editor',
+      'Tassneen Bashir, Animations Deputy Editor',
+    ],
+  },
+  {
+    title: 'News',
+    members: [
+      'Karen Xia, News Editor',
+      'Valeria Escobar, Deputy News Editor',
+      'Shubham Saharan, Senior Staff Writer',
+      'Emma James, Senior Staff Writer',
+      'Nelson Luna, Staff Writer',
+    ],
+  },
+  {
+    title: 'Opinion',
+    members: [
+      'Kaili Meier, Co-Editorial Page Editor',
+      'Erin Neil, Co-Editorial Page Editor',
+      'Kyra Dawkins, Deputy Editorial Page Editor',
+    ],
+  },
+  {
+    title: 'Revenue',
+    members: ['Sarah Peters, Sales Manager', 'Katrina Yin, Growth Manager'],
   },
   {
     title: 'Product',
     members: [
-      'Kevin Li, Head of Product',
       'Arsalaan Ansari, Head of Engineering',
-      'Cecilia Orduna, Lead Product Designer',
+      'William Chiu, Engineering Manager',
+      'Cecilia Orduña, Lead Product Designer',
+      'Matthew Vanegas, Senior Developer',
+      'Harrison Wang, Developer',
+      'Elaine Wang, Developer',
+      'Chenoa Gale, Developer',
     ],
   },
   {
-    title: 'Corporate Board',
+    title: 'Spectrum',
+    members: ['Grace Lin, Spectrum Editor'],
+  },
+  {
+    title: 'Arts & Entertainment',
     members: [
-      'Katherine Gerberich, Editor in Chief',
-      'Rahil Kamath, Managing Editor',
-      'Nima Mozhgani, Publisher',
+      'Sarah Beckley, A&E Editor',
+      'Gia Kim, A&E Deputy Editor',
+      'Isabela Espadas Barros Leal, A&E Deputy Editor',
+      'Fonda Shen, A&E Deputy Editor',
+      'Samuel Jones, A&E Deputy Editor',
+      'Alejandra Quintana, A&E Deputy Editor',
     ],
   },
   {
-    title: 'Corporate Board',
+    title: 'Copy',
     members: [
-      'Katherine Gerberich, Editor in Chief',
-      'Rahil Kamath, Managing Editor',
-      'Nima Mozhgani, Publisher',
+      'Sarah Braka, Deputy Copy Editor',
+      'Eden Teferi, Deputy Copy Editor',
+      'María Thompson, Preslotter',
     ],
   },
   {
-    title: 'Product',
-    members: [
-      'Kevin Li, Head of Product',
-      'Arsalaan Ansari, Head of Engineering',
-      'Cecilia Orduna, Lead Product Designer',
-    ],
+    title: 'Sports',
+    members: ['Harry Walker, Staff Writer', 'Elizabeth Karpen, Staff Writer'],
   },
   {
-    title: 'Corporate Board',
-    members: [
-      'Katherine Gerberich, Editor in Chief',
-      'Rahil Kamath, Managing Editor',
-      'Nima Mozhgani, Publisher',
-    ],
+    title: 'Photo',
+    members: ['Natalie Guerra, Photo Editor'],
   },
   {
-    title: 'Product',
+    title: 'Engagement',
     members: [
-      'Kevin Li, Head of Product',
-      'Arsalaan Ansari, Head of Engineering',
-      'Cecilia Orduna, Lead Product Designer',
-    ],
-  },
-  {
-    title: 'Product',
-    members: [
-      'Kevin Li, Head of Product',
-      'Arsalaan Ansari, Head of Engineering',
-      'Cecilia Orduna, Lead Product Designer',
-    ],
-  },
-  {
-    title: 'Corporate Board',
-    members: [
-      'Katherine Gerberich, Editor in Chief',
-      'Rahil Kamath, Managing Editor',
-      'Nima Mozhgani, Publisher',
-    ],
-  },
-  {
-    title: 'Corporate Board',
-    members: [
-      'Katherine Gerberich, Editor in Chief',
-      'Rahil Kamath, Managing Editor',
-      'Nima Mozhgani, Publisher',
-    ],
-  },
-  {
-    title: 'Corporate Board',
-    members: [
-      'Katherine Gerberich, Editor in Chief',
-      'Rahil Kamath, Managing Editor',
-      'Nima Mozhgani, Publisher',
+      'Isabel Jauregui, Engagement Director',
+      'Madison Harden, Senior Engagement Manager',
+      'Hailey Shi, Engagement Manager',
+      'Jake Fisher, Engagement Manager',
     ],
   },
 ];
@@ -249,7 +326,11 @@ const Orientation = () => (
       link="//columbiaspectator.com"
       recognition={recognition}
     />
-    <StaffContainer id="staff" staffInfo={StaffInfo} />
+    <StaffContainer
+      id="staff"
+      staffInfo={StaffInfo}
+      staffInfoMobile={StaffInfoMobile}
+    />
   </div>
 );
 
