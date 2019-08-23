@@ -16,7 +16,7 @@ const Container = styled.div`
   margin-top: 5vh;
   margin-right: 4vw;
   justify-content: flex-end;
-  @media (max-width: ${theme.medium}) {
+  @media (max-width: ${theme.large}) {
     margin-top: 5vh;
     margin-right: 11vw;
     padding-bottom: 3vh;
@@ -35,14 +35,16 @@ const TableEntry = styled.div`
   text-align: right;
   padding-right: 1.5vw;
   color: red;
-  @media (max-width: ${theme.medium}) {
+  @media (max-width: ${theme.large}) {
     padding-bottom: 2vh;
   }
 `;
 
 const TableText = styled.p`
-  @media (max-width: ${theme.medium}) {
+  font-size: 2vh;
+  @media (max-width: ${theme.large}) {
     margin-right: 5vw;
+    font-size: 1.4rem;
   }
 `;
 

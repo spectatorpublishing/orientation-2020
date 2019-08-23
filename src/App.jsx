@@ -8,13 +8,34 @@ import Navbar from './components/Navbar';
 import BarnumbiaData from './data/BarnumbiaData';
 
 const navBarEntries = [
-  'HOME',
-  'CLUBS',
-  'REGISTRATION',
-  'GET TO KNOW BARNUMBIA',
-  'MAPS',
-  '116 TRADITIONS',
-  'JOIN SPEC',
+  {
+    title: 'HOME',
+    linkUrl: '/',
+  },
+  {
+    title: 'CLUBS',
+    linkUrl: '/',
+  },
+  {
+    title: 'REGISTRATION',
+    linkUrl: '/',
+  },
+  {
+    title: 'GET TO KNOW BARNUMBIA',
+    linkUrl: '/#/barnumbia',
+  },
+  {
+    title: 'MAPS',
+    linkUrl: '/',
+  },
+  {
+    title: '116 TRADITIONS',
+    linkUrl: '/',
+  },
+  {
+    title: 'JOIN SPEC',
+    linkUrl: '/',
+  },
 ];
 const home = () => <Orientation />;
 const barnumbia = () => (
