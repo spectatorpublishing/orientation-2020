@@ -76,22 +76,25 @@ const BannerRowDemo = [
 const MobileBannerRowDemo = [
   {
     title: 'COURSES WE LOVED',
-    url: 'https://www.columbiaspectator.com/',
+    url:
+      'https://www.columbiaspectator.com/spectrum/2019/08/22/courses-we-loved-staff-picks-for-2019/',
   },
   {
     title: 'DOWNLOAD VERGIL+',
-    url: 'https://www.columbiaspectator.com/',
+    url:
+      'https://www.columbiaspectator.com/spectrum/2018/04/30/vergils-debut-how-to-make-registration-a-piece-of-cake/',
+
     color: '#174d5b',
   },
   {
     title: '116 THINGS TO DO BEFORE GRADUATING',
-    url: 'https://www.columbiaspectator.com/',
+    url: 'https://www.columbiaspectator.com/orientation-2018/116-traditions/',
     color: '#f26d5b',
     shadowColor: '#f1bc9c',
   },
   {
     title: 'GET YOUR TEXTBOOKS',
-    url: 'https://www.columbiaspectator.com/',
+    url: 'https://www.columbiaspectator.com/spectrum/required-reading/',
     color: '#9BDAE3',
   },
 ];

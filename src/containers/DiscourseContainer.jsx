@@ -57,6 +57,7 @@ const ArticleContainer = styled.div`
   flex-wrap: wrap;
   margin-top: -5rem;
   direction: rtl;
+  align-items: flex-start;
 
   & > a {
     box-sizing: border-box;
@@ -68,11 +69,8 @@ const ArticleContainer = styled.div`
     padding: 1rem;
 
     @media only screen and (max-width: ${(props) => props.theme.small}) {
+      flex-basis: 100%;
       min-width: 5rem;
-
-      &:last-child {
-        padding-left: 0;
-      }
     }
   }
 `;
