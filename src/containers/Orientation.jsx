@@ -8,6 +8,7 @@ import Divider from '../components/Divider';
 import DividerWithNames from '../components/DividerWithNames';
 import GetToKnow from '../components/GetToKnow';
 import JoinTheDiscourseData from '../data/JoinTheDiscourseData';
+import MapsContainer from './MapsContainer';
 
 const tocEntries = [
   {
@@ -314,6 +315,7 @@ const Orientation = () => (
       buttons={BannerRowDemo}
       mobileButtons={MobileBannerRowDemo}
     />
+    <MapsContainer />
     <DiscourseContainer id="discourse">
       {JoinTheDiscourseData.map((entry) => (
         <Article
