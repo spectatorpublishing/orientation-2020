@@ -76,7 +76,7 @@ const DividerWithNames = (props) => {
       </BodyText>
       <br />
       <BodyText>
-        urious to see how it&apos;s done? Interested in doing this work
+        Curious to see how it&apos;s done? Interested in doing this work
         yourself?
       </BodyText>
       <br />
