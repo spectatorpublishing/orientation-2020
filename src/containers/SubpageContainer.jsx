@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Desktop } from 'react-responsive-simple';
 import PropTypes from 'prop-types';
 import StylizedArticle from '../components/StylizedArticle';
+import { theme } from '../GlobalStyles';
 
 const OuterContainer = styled.div``;
 
@@ -27,10 +28,14 @@ const SectionRow = styled.div`
 
   & > a {
     box-sizing: border-box;
-    flex: 1 1 33%;
+    flex: 1 1 30%;
     padding: 1rem;
     display: flex;
     flex-wrap: wrap;
+
+    @media (max-width: ${theme.large}) {
+      flex: 1 1 50%;
+    }
   }
 
   &::after {
