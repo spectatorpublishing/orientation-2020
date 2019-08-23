@@ -62,13 +62,14 @@ const Divider = (props) => {
       </BodyText>
     </>
   );
+  const bodyToShow = body || defaultBody;
   return (
     <Container>
       <LeftDiv>
         <Title>{title}</Title>
       </LeftDiv>
       <RightDiv>
-        <Body>{body || defaultBody}</Body>
+        <Body>{bodyToShow}</Body>
       </RightDiv>
     </Container>
   );
