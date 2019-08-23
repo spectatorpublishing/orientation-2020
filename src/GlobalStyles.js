@@ -76,8 +76,10 @@ export const GlobalStyles = createGlobalStyle`
 export const theme = {
   black: '#000000',
   white: '#FFFFFF',
-  barnardBlue: '#00489A',
-  columbiaBlue: '#62A8E5',
+  purple: '#9193C8',
+  orange: '#EC7100',
+  navy: '#242C49',
+  yellow: '#FFD05F',
   darkGray: '#555555',
   mediumGray: '#AAAAAA',
   lightGray: '#DDDDDD',

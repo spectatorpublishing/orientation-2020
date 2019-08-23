@@ -7,6 +7,9 @@ import BannerButton from "../components/BannerButton.jsx";
 import MapsList from "../components/MapsList.jsx";
 import Article from "../components/Article";
 import DiscourseContainer from "../components/DiscourseContainer";
+import Divider from "../components/Divider";
+import DividerWithNames from "../components/DividerWithNames";
+import GetToKnow from "../components/GetToKnow";
 
 const sectionDemo = {
   title: "demo title",
@@ -89,4 +92,46 @@ storiesOf("Discourse Container", module).add("With Articles", () => (
       headline="Football kicks off season at Ivy League Media Day hosted by ESPN"
     />
   </DiscourseContainer>
+));
+
+storiesOf("Divider", module).add("Default", () => (
+  <Divider
+    title="LIKE WHAT YOU SEE?"
+    body={false}
+    link="//columbiaspectator.com"
+  />
+));
+
+const recognition =
+  "COVER ART BY: JOURNALISM DESIGNER WEBSITE DESIGN BY: CECILIA ORDUÑA DEVELOPED BY: ARSALAAN ANSARI, WILLIAM CHIU, HARRISON WANG, HARRISON WANG, BILL CHEN & CHENOA BUNTS-ANDERSON";
+storiesOf("DividerWithNames", module).add("Default", () => (
+  <DividerWithNames
+    title="LIKE WHAT YOU SEE?"
+    body={false}
+    link="//columbiaspectator.com"
+    recognition={recognition}
+  />
+));
+
+const backgroundImage = {
+  image:
+    "https://spectator.arcpublishing.com/photo/resize/6OpqLabVVWxuYjOPt8GHrrT9CIE=/arc-anglerfish-arc2-prod-spectator/ZNKTNLGKAFHUTFSIXC4HFO3OR4.jpeg"
+};
+const getToKnow = [
+  {
+    tab: "BARNUMBIA",
+    tabLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  },
+  {
+    tab: "CAMPUS LIFE",
+    tabLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  },
+  {
+    tab: "ACADEMICS",
+    tabLink: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  }
+];
+
+storiesOf("GetToKnow", module).add("GetToKnow", () => (
+  <GetToKnow getToKnow={getToKnow} backgroundImage={backgroundImage} />
 ));
