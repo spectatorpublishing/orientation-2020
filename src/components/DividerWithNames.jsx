@@ -14,29 +14,35 @@ const LeftDiv = styled.div`
   flex: 65%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-left: 3rem;
+  margin-left: 6vw;
 `;
 
 const RightDiv = styled.div`
   flex: 35%;
   margin: 0.4rem;
-  margin-right: 2rem;
+  margin-right: 6vw;
 `;
 const Title = styled.h3`
   flex: 50%;
   color: #09093b;
   font-size: 4.2vw;
+  line-height: 6vw;
+  @media (max-width: 420px) {
+    line-height: 8vw;
+  }
 `;
 
 const Body = styled.div`
   flex: 50%;
   height: 100%;
-  line-height: 1.3rem;
+  line-height: 1.5vw;
+  @media (max-width: 420px) {
+    line-height: 5px;
+  }
 `;
 
 const BodyText = styled.p`
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   color: #09093b;
   display: inline;
   font-weight: 500;
@@ -50,10 +56,13 @@ const Anchor = styled.a`
 const NameText = styled.p`
   color: #09093b;
   font-weight: 700;
-  font-size: 1.5vw;
+  font-size: 1.25vw;
+  @media (min-width: 768px) {
+    font-size: 1.4vw;
+  }
   padding-left: 1rem;
   padding-right: 1rem;
-  line-height: 1.5rem;
+  line-height: 2vw;
 `;
 const DividerWithNames = (props) => {
   const {
