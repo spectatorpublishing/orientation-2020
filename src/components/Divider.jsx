@@ -6,7 +6,7 @@ import { theme } from '../GlobalStyles';
 const Container = styled.div`
   background: ${theme.purple};
   display: flex;
-  padding: 0.6rem;
+  padding: 0.4vw;
 `;
 const LeftDiv = styled.div`
   flex: 40%;
@@ -30,11 +30,14 @@ const Body = styled.div`
   height: 100%;
   padding: 1rem;
   padding-right: 4rem;
-  line-height: 1.2rem;
+  line-height: 1.3vw;
+  @media (max-width: 500px) {
+    line-height: 4px;
+  }
 `;
 
 const BodyText = styled.p`
-  font-size: 0.9vw;
+  font-size: 1vw;
   color: #104a4f;
   display: inline;
   font-weight: 600;
@@ -45,6 +48,12 @@ const Anchor = styled.a`
   color: inherit;
 `;
 
+const HR = styled.hr`
+  visibility: hidden;
+  height: 2px;
+  margin: -0.25vw;
+`;
+
 const Divider = (props) => {
   const { title, body, link } = props;
   const defaultBody = (
@@ -53,9 +62,9 @@ const Divider = (props) => {
         This website was created entirely by our tech and design teams here at
         Spectator. Curious to see how it&apos;s done?
       </BodyText>
-      <br />
+      <HR />
       <BodyText>Interested in doing this work yourself? </BodyText>
-      <br />
+      <HR />
       <BodyText>
         <Anchor href={link}>Click here</Anchor>
         <BodyText> to learn how to join our team</BodyText>
