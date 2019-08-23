@@ -6,38 +6,47 @@ import { theme } from '../GlobalStyles';
 const Container = styled.div`
   background: ${theme.purple};
   display: flex;
-  padding: 0.6rem;
+  padding-top: 2.4vw;
+  padding-bottom: 2.4vw;
+  max-height: 100%;
+  max-width: 100%;
 `;
 const LeftDiv = styled.div`
-  flex: 40%;
+  flex: 65%;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  margin-left: 6vw;
 `;
+
 const RightDiv = styled.div`
-  flex: 60%;
+  flex: 35%;
   margin: 0.4rem;
-  margin-left: 0;
+  margin-right: 6vw;
 `;
 const Title = styled.h3`
-  color: #104a4f;
-  text-align: right;
+  flex: 50%;
+  color: #09093b;
   font-size: 4.2vw;
+  line-height: 6vw;
+  @media (max-width: 420px) {
+    line-height: 8vw;
+  }
 `;
 
 const Body = styled.div`
-  text-align: left;
+  flex: 50%;
   height: 100%;
-  padding: 1rem;
-  padding-right: 4rem;
-  line-height: 1.2rem;
+  line-height: 1.5vw;
+  @media (max-width: 420px) {
+    line-height: 5px;
+  }
 `;
 
 const BodyText = styled.p`
-  font-size: 0.9vw;
-  color: #104a4f;
+  font-size: 1.3vw;
+  color: #09093b;
   display: inline;
-  font-weight: 600;
+  font-weight: 500;
 `;
 
 const Anchor = styled.a`
@@ -45,16 +54,32 @@ const Anchor = styled.a`
   color: inherit;
 `;
 
-const Divider = (props) => {
-  const { title, body, link } = props;
+const NameText = styled.p`
+  color: #09093b;
+  font-weight: 700;
+  font-size: 1.25vw;
+  @media (min-width: 768px) {
+    font-size: 1.4vw;
+  }
+  padding-left: 1rem;
+  padding-right: 1rem;
+  line-height: 2vw;
+`;
+const DividerWithNames = (props) => {
+  const {
+    title, body, link, recognition,
+  } = props;
   const defaultBody = (
     <>
       <BodyText>
         This website was created entirely by our tech and design teams here at
-        Spectator. Curious to see how it&apos;s done?
+        Spectator.
       </BodyText>
       <br />
-      <BodyText>Interested in doing this work yourself? </BodyText>
+      <BodyText>
+        Curious to see how it&apos;s done? Interested in doing this work
+        yourself?
+      </BodyText>
       <br />
       <BodyText>
         <Anchor href={link}>Click here</Anchor>
@@ -67,18 +92,20 @@ const Divider = (props) => {
     <Container>
       <LeftDiv>
         <Title>{title}</Title>
+        <Body>{bodyToShow}</Body>
       </LeftDiv>
       <RightDiv>
-        <Body>{bodyToShow}</Body>
+        <div>
+          <NameText>{recognition}</NameText>
+        </div>
       </RightDiv>
     </Container>
   );
 };
-
-Divider.propTypes = {
+DividerWithNames.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
+  recognition: PropTypes.string.isRequired,
 };
-
-export default Divider;
+export default DividerWithNames;

@@ -8,6 +8,7 @@ import MapsList from "../components/MapsList.jsx";
 import Article from "../components/Article";
 import DiscourseContainer from "../components/DiscourseContainer";
 import Divider from "../components/Divider";
+import DividerWithNames from "../components/DividerWithNames";
 
 const sectionDemo = {
   title: "demo title",
@@ -97,5 +98,16 @@ storiesOf("Divider", module).add("Default", () => (
     title="LIKE WHAT YOU SEE?"
     body={false}
     link="//columbiaspectator.com"
+  />
+));
+
+const recognition =
+  "COVER ART BY: JOURNALISM DESIGNER WEBSITE DESIGN BY: CECILIA ORDUÑA DEVELOPED BY: ARSALAAN ANSARI, WILLIAM CHIU, HARRISON WANG, HARRISON WANG, BILL CHEN & CHENOA BUNTS-ANDERSON";
+storiesOf("DividerWithNames", module).add("Default", () => (
+  <DividerWithNames
+    title="LIKE WHAT YOU SEE?"
+    body={false}
+    link="//columbiaspectator.com"
+    recognition={recognition}
   />
 ));

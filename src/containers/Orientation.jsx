@@ -4,6 +4,8 @@ import BannerRow from './BannerRow';
 import StaffContainer from './StaffContainer';
 import DiscourseContainer from './DiscourseContainer';
 import Article from '../components/Article';
+import Divider from '../components/Divider';
+import DividerWithNames from '../components/DividerWithNames';
 
 const tocEntries = [
   'Campus Life',
@@ -162,9 +164,16 @@ const StaffInfo = [
   },
 ];
 
+const recognition = 'COVER ART BY: JOURNALISM DESIGNER WEBSITE DESIGN BY: CECILIA ORDUÑA DEVELOPED BY: ARSALAAN ANSARI, WILLIAM CHIU, HARRISON WANG, HARRISON WANG, BILL CHEN & CHENOA BUNTS-ANDERSON';
+
 const Orientation = () => (
   <div>
     <WelcomeContainer id="welcome" tocEntries={tocEntries} />
+    <Divider
+      title="LIKE WHAT YOU SEE?"
+      body={false}
+      link="//columbiaspectator.com"
+    />
     <BannerRow buttons={BannerRowDemo} mobileButtons={MobileBannerRowDemo} />
     <DiscourseContainer>
       <Article
@@ -188,6 +197,12 @@ const Orientation = () => (
         headline="Football kicks off season at Ivy League Media Day hosted by ESPN"
       />
     </DiscourseContainer>
+    <DividerWithNames
+      title="LIKE WHAT YOU SEE?"
+      body={false}
+      link="//columbiaspectator.com"
+      recognition={recognition}
+    />
     <StaffContainer staffInfo={StaffInfo} />
   </div>
 );
