@@ -72,8 +72,8 @@ const Divider = (props) => {
   const defaultBody = (
     <div>
       <BodyText>
-        This website was created entirely by our tech and design teams here at
-        Spectator. Curious to see how it&apos;s done?
+        This website was created entirely by our tech and product design teams
+        here at Spectator. Curious to see how it&apos;s done?
       </BodyText>
       <br />
       <BodyText>Interested in doing this work yourself? </BodyText>
