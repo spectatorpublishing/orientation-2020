@@ -30,7 +30,7 @@ const tocEntries = [
     id: 'banner',
   },
   {
-    title: 'Required Reading',
+    title: 'Textbooks',
     id: 'banner',
   },
   {
@@ -73,8 +73,8 @@ const BannerRowDemo = [
     shadowColor: theme.yellow,
   },
   {
-    title: 'REQUIRED READING',
-    url: 'https://www.columbiaspectator.com/spectrum/required-reading/',
+    title: 'GET TEXTBOOKS',
+    url: '/#/textbooks',
     color: theme.navy,
     shadowColor: theme.navy,
   },
@@ -101,7 +101,7 @@ const MobileBannerRowDemo = [
   },
   {
     title: 'GET YOUR TEXTBOOKS',
-    url: 'https://www.columbiaspectator.com/spectrum/required-reading/',
+    url: '/#/textbooks',
     color: '#9BDAE3',
   },
 ];
