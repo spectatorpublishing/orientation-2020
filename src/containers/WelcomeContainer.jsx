@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { Desktop, ResponsiveComponent } from 'react-responsive-simple';
+import { Desktop, MobileAndTablet } from 'react-responsive-simple';
 import TableOfContents from '../components/TableOfContents';
 import { theme } from '../GlobalStyles';
 
@@ -40,18 +40,20 @@ const TextContainer = styled.div`
 
 const OrientationImageContainer = styled.div`
   width: 100%;
-  height: 0;
-`;
-const OrientationImage = styled.img`
-  object-fit: contain;
-  width: 100%;
-  min-height: 100%;
+  height: auto;
+  background-image: url(${photoUrl});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
-const Italicized = styled.h5`
+const Italicized = styled.p`
   margin-top: 0.5rem;
   font-style: italic;
   font-weight: lighter;
+  @media (max-width: ${theme.large}) {
+    text-shadow: 2px 2px 4px white;
+  }
 `;
 
 const Title = styled.h1`
@@ -85,15 +87,11 @@ const WelcomeContainer = (props) => {
               </TextContainer>
               <TableOfContents entries={tocEntries} />
             </Column>
-            <Column>
-              <OrientationImageContainer>
-                <OrientationImage src={photoUrl} />
-              </OrientationImageContainer>
-            </Column>
+            <OrientationImageContainer />
           </Row>
         </Container>
       </Desktop>
-      <ResponsiveComponent max={1100}>
+      <MobileAndTablet>
         <Container>
           <TextContainer>
             <Title>WELCOME</Title>
@@ -104,7 +102,7 @@ const WelcomeContainer = (props) => {
           </TextContainer>
           <TableOfContents entries={tocEntries} />
         </Container>
-      </ResponsiveComponent>
+      </MobileAndTablet>
     </div>
   );
 };

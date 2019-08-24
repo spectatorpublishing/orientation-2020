@@ -10,8 +10,12 @@ const NavBarContainer = styled.div`
   flex-direction: inline-row;
   height: 6vh;
   background: black;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+
+  & > :first-child {
+    margin-left: 2vw;
+  }
 
   @media (max-width: ${theme.large}) {
     display: flex;
@@ -30,11 +34,11 @@ const NavBarEntry = styled.div`
 
 const NavBarText = styled.a`
   color: white;
-  font-size: 2.1em;
+  font-size: 1.8em;
   font-family: "HalloEuroboy", sans-serif;
+
   @media (max-width: 1350px) {
     height: auto;
-    font-size: 2.1em;
     padding-left: 1vw;
     padding-right: 1vw;
     line-height: 0.8;
@@ -45,13 +49,18 @@ const NavBarText = styled.a`
   }
 `;
 
-const ColumbiaSpectator = styled.div`
-  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdHfpvhTURAooEnUy0KdldKLP9OHHbliCo81ZbiN4rtghrH8m5");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 6vh;
-  width: 16vw;
+const ColumbiaSpectatorContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: ${theme.orange};
+  height: 100%;
+  width: 10vw;
+`;
+
+const ColumbiaSpectator = styled.img`
+  width: 80%;
+  object-fit: contain;
 
   @media only screen and (max-height: ${theme.large}) {
     height: 60px;
@@ -136,7 +145,9 @@ export default class Navbar extends Component {
                 </NavBarEntry>
               );
             })}
-            <ColumbiaSpectator>*insert the logo here*</ColumbiaSpectator>
+            <ColumbiaSpectatorContainer>
+              <ColumbiaSpectator src="https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/ZKALKJLFQFECNGLNTICSJUMFF4.png" />
+            </ColumbiaSpectatorContainer>
           </NavBarContainer>
         </Desktop>
 

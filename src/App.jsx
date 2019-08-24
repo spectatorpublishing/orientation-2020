@@ -3,9 +3,12 @@ import { ThemeProvider } from 'styled-components';
 import { Route, Switch } from 'react-router-dom';
 import Orientation from './containers/Orientation';
 import Subpage from './containers/SubpageContainer';
+import TextbooksContainer from './containers/TextbooksContainer';
 import { GlobalStyles, theme } from './GlobalStyles';
 import Navbar from './components/Navbar';
 import BarnumbiaData from './data/BarnumbiaData';
+import RegistrationData from './data/RegistrationData';
+import StudentLifeData from './data/StudentLifeData';
 
 const navBarEntries = [
   {
@@ -14,11 +17,11 @@ const navBarEntries = [
   },
   {
     title: 'CLUBS',
-    linkUrl: '/',
+    linkUrl: 'https://www.columbiaspectator.com/orientation-2018/campus-maps/',
   },
   {
     title: 'REGISTRATION',
-    linkUrl: '/',
+    linkUrl: '/#/registration',
   },
   {
     title: 'GET TO KNOW BARNUMBIA',
@@ -26,15 +29,16 @@ const navBarEntries = [
   },
   {
     title: 'MAPS',
-    linkUrl: '/',
+    linkUrl: 'https://www.columbiaspectator.com/orientation-2018/campus-maps/',
   },
   {
     title: '116 TRADITIONS',
-    linkUrl: '/',
+    linkUrl:
+      'https://www.columbiaspectator.com/orientation-2018/116-traditions/',
   },
   {
     title: 'JOIN SPEC',
-    linkUrl: '/',
+    linkUrl: 'http://www.specpublishing.com/join',
   },
 ];
 const home = () => <Orientation />;
@@ -42,8 +46,12 @@ const barnumbia = () => (
   <Subpage title="GET TO KNOW BARNUMBIA" data={BarnumbiaData} />
 );
 const course = () => (
-  <Subpage title="COURSE REGISTRATION" data={BarnumbiaData} />
+  <Subpage title="COURSE REGISTRATION" data={RegistrationData} />
 );
+
+const campus = () => <Subpage title="CAMPUS LIFE" data={StudentLifeData} />;
+
+const textbooks = () => <TextbooksContainer title="TEXTBOOK LINKS" />;
 
 function App() {
   return (
@@ -54,7 +62,9 @@ function App() {
         <Switch>
           <Route exact path="/" component={home} />
           <Route exact path="/barnumbia" component={barnumbia} />
-          <Route exact path="/course" component={course} />
+          <Route exact path="/registration" component={course} />
+          <Route exact path="/campus" component={campus} />
+          <Route exact path="/textbooks" component={textbooks} />
         </Switch>
       </div>
     </ThemeProvider>

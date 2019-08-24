@@ -13,7 +13,7 @@ const InnerContainer = styled.div`
 `;
 
 const DesktopTextContainer = styled.div`
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   display: none;
   max-width: 40%;
   padding: 0.5rem;
@@ -24,7 +24,7 @@ const DesktopTextContainer = styled.div`
 `;
 
 const MobileTextContainer = styled.div`
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   display: none;
   margin: auto 1rem;
 
@@ -57,39 +57,27 @@ const ArticleContainer = styled.div`
   flex-wrap: wrap;
   margin-top: -5rem;
   direction: rtl;
+  align-items: flex-start;
 
-  & > div {
-    box-sizing: border-box;
-    flex: 1 1 50%;
+  & > a {
+    box-sizing: border-box !important;
+    flex: 1 1 33%;
     min-width: 20rem;
     direction: ltr;
     display: flex;
     flex-wrap: wrap;
+    padding: 1rem;
 
-    & a {
-      padding: 1rem;
-      flex: 1 1 25%;
-      min-width: 10rem;
-
-      @media only screen and (max-width: ${(props) => props.theme.small}) {
-        min-width: 5rem;
-
-        &:last-child {
-          padding-left: 0;
-        }
-      }
+    @media only screen and (max-width: ${(props) => props.theme.small}) {
+      flex-basis: 100%;
+      min-width: 5rem;
     }
   }
 `;
 
-function DiscourseContainer({ children }) {
-  const articlePairs = children.reduce((result, value, index, array) => {
-    if (index % 2 === 0) result.push(array.slice(index, index + 2));
-    return result;
-  }, []);
-
+function DiscourseContainer({ id, children }) {
   return (
-    <OuterContainer>
+    <OuterContainer id={id}>
       <MobileTextContainer>
         <Header>Join the discourse</Header>
         <Description>the hottest topics on campus</Description>
@@ -99,17 +87,14 @@ function DiscourseContainer({ children }) {
           <Header>Join the discourse</Header>
           <Description>the hottest topics on campus</Description>
         </DesktopTextContainer>
-        <ArticleContainer>
-          {articlePairs.map((articlePair) => (
-            <div>{articlePair}</div>
-          ))}
-        </ArticleContainer>
+        <ArticleContainer>{children}</ArticleContainer>
       </InnerContainer>
     </OuterContainer>
   );
 }
 
 DiscourseContainer.propTypes = {
+  id: PropTypes.string.isRequired,
   children: PropTypes.arrayOf(PropTypes.element).isRequired,
 };
 
