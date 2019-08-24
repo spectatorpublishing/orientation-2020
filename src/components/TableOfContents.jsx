@@ -46,12 +46,14 @@ const TableText = styled.p`
     margin-right: 5vw;
     font-size: 1.4rem;
   }
+  text-transform: lowercase;
 `;
 
 const changeTextColor = (id, isActive) => {
   const entry = document.getElementById(id);
   if (isActive) {
-    entry.style.color = '#F47263';
+    entry.style.color = '#9193C8';
+    entry.style.fontStyle = 'italic';
   } else {
     entry.style.color = 'black';
   }

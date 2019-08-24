@@ -43,6 +43,9 @@ const NavBarText = styled.a`
     padding-bottom: 2vh;
     font-size: 2.6rem;
   }
+  :hover {
+    color: ${theme.yellow};
+  }
 `;
 
 const ColumbiaSpectator = styled.div`
