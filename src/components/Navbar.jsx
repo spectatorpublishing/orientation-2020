@@ -59,11 +59,7 @@ const ColumbiaSpectatorContainer = styled.div`
   width: 10vw;
 `;
 
-const ColumbiaSpectator = styled.div`
-  background-image: url("https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/ZKALKJLFQFECNGLNTICSJUMFF4.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+const ColumbiaSpectator = styled.img`
   width: 80%;
 
   @media only screen and (max-height: ${theme.large}) {
@@ -150,7 +146,9 @@ export default class Navbar extends Component {
               );
             })}
             <ColumbiaSpectatorContainer>
-              <ColumbiaSpectator />
+              <ColumbiaSpectator
+                src="https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/ZKALKJLFQFECNGLNTICSJUMFF4.png"
+              />
             </ColumbiaSpectatorContainer>
           </NavBarContainer>
         </Desktop>
