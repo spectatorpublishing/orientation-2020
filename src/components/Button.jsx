@@ -7,6 +7,7 @@ const Button = styled.a`
   display: block;
   margin: 1rem;
   text-decoration: none;
+  text-transform: uppercase;
 `;
 
 const Inner = styled.div`
@@ -26,7 +27,7 @@ const Inner = styled.div`
     position: absolute;
     height: 100%;
     width: 100%;
-    border: 1px solid #e27400;
+    border: 2px solid #ec7100;
     left: -0.4rem;
     top: 0.2rem;
   }
@@ -35,9 +36,9 @@ const Inner = styled.div`
     position: absolute;
     display: inline-block;
     top: 50%;
-    height: 1px;
+    height: 2px;
     width: 500%;
-    background: #e27400;
+    background: #ec7100;
     left: 100%;
   }
 `;
