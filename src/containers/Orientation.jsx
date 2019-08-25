@@ -110,7 +110,7 @@ const StaffInfo = [
   {
     title: 'Corporate Board',
     members: [
-      'Katherine Gerberich, Editor And Chief',
+      'Katherine Gerberich, Editor in Chief',
       'Rahil Kamath, Managing Editor',
       'Nima Mozhgani, Publisher',
     ],
