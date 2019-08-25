@@ -161,7 +161,7 @@ const Carousel = (props) => {
                         photoAlt={entry.photoAlt}
                         photoUrl={entry.photoUrl}
                         headline={entry.headline}
-                        linkColor = {theme.purple}
+                        linkColor={theme.purple}
                       />
                     ))}
                   </ArticleRowWrapper>

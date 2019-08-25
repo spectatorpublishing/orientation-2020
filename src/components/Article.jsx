@@ -25,7 +25,7 @@ const ClickNotice = styled.p`
 `;
 
 function Article({
-  link, photoAlt, photoUrl, headline, linkColor
+  link, photoAlt, photoUrl, headline, linkColor,
 }) {
   return (
     <Container href={link} target="_blank">

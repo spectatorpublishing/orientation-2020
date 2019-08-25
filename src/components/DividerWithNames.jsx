@@ -106,7 +106,7 @@ const DividerWithNames = (props) => {
 
   const defaultNames = (
     <div>
-    <NameText>Cover art by: helen yang</NameText>
+      <NameText>Cover art by: helen yang</NameText>
       <br />
       <NameText>Website design by: Cecilia ORDUÑA</NameText>
       <br />
@@ -115,7 +115,7 @@ const DividerWithNames = (props) => {
         BILL CHEN & CHENOA Gale
       </NameText>
     </div>
-  )
+  );
   const defaultBodyMobile = (
     <div>
       <BodyText>
