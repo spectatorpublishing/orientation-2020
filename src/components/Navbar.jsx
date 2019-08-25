@@ -5,6 +5,8 @@ import { slide as Menu } from 'react-burger-menu';
 import { Desktop, MobileAndTablet } from 'react-responsive-simple';
 import { theme } from '../GlobalStyles';
 
+const logoUrl = 'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/ZKALKJLFQFECNGLNTICSJUMFF4.png';
+
 const NavBarContainer = styled.div`
   display: flex;
   flex-direction: inline-row;
@@ -22,6 +24,7 @@ const NavBarContainer = styled.div`
     display: flex;
     align-items: center;
     height: 60px;
+    background: ${theme.yellow};
   }
 
   @media only screen and (max-height: ${theme.large}) {
@@ -31,6 +34,9 @@ const NavBarContainer = styled.div`
 
 const NavBarEntry = styled.div`
   text-align: center;
+  @media (max-width: ${theme.large}) {
+    margin-bottom: 2vh;
+  }
 `;
 
 const NavBarText = styled.a`
@@ -45,8 +51,8 @@ const NavBarText = styled.a`
     line-height: 0.8;
   }
   @media (max-width: ${theme.large}) {
-    padding-bottom: 2vh;
-    font-size: 2.6rem;
+    padding-bottom: 4vh;
+    font-size: 2rem;
   }
 `;
 
@@ -57,6 +63,10 @@ const ColumbiaSpectatorContainer = styled.div`
   background: ${theme.yellow};
   height: 100%;
   width: 10vw;
+  @media (max-width: ${theme.large}) {
+    margin-left: 0vw;
+    width: 33vw;
+  }
 `;
 
 const ColumbiaSpectator = styled.img`
@@ -79,11 +89,11 @@ const burgerStyle = {
     position: 'relative',
     width: '35px',
     height: '30px',
-    left: '85vw',
+    left: '63vw',
     top: '0',
   },
   bmBurgerBars: {
-    background: 'white',
+    background: theme.navy,
   },
   bmMenu: {
     background: 'black',
@@ -147,13 +157,16 @@ export default class Navbar extends Component {
               );
             })}
             <ColumbiaSpectatorContainer>
-              <ColumbiaSpectator src="https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/ZKALKJLFQFECNGLNTICSJUMFF4.png" />
+              <ColumbiaSpectator src={logoUrl} />
             </ColumbiaSpectatorContainer>
           </NavBarContainer>
         </Desktop>
 
         <MobileAndTablet>
           <NavBarContainer>
+            <ColumbiaSpectatorContainer>
+              <ColumbiaSpectator src={logoUrl} />
+            </ColumbiaSpectatorContainer>
             <BurgerContainer>
               <Menu
                 right
