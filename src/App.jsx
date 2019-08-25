@@ -13,7 +13,7 @@ import StudentLifeData from './data/StudentLifeData';
 const navBarEntries = [
   {
     title: 'HOME',
-    linkUrl: '/',
+    linkUrl: '/orientation-2019',
   },
   {
     title: 'CLUBS',
@@ -21,11 +21,11 @@ const navBarEntries = [
   },
   {
     title: 'REGISTRATION',
-    linkUrl: '/#/registration',
+    linkUrl: '/orientation-2019/#/registration',
   },
   {
     title: 'GET TO KNOW BARNUMBIA',
-    linkUrl: '/#/barnumbia',
+    linkUrl: '/orientation-2019/#/barnumbia',
   },
   {
     title: 'MAPS',
@@ -56,7 +56,7 @@ const textbooks = () => <TextbooksContainer title="TEXTBOOK LINKS" />;
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div>
+      <>
         <Navbar entries={navBarEntries} />
         <GlobalStyles />
         <Switch>
@@ -66,7 +66,7 @@ function App() {
           <Route exact path="/campus" component={campus} />
           <Route exact path="/textbooks" component={textbooks} />
         </Switch>
-      </div>
+      </>
     </ThemeProvider>
   );
 }
