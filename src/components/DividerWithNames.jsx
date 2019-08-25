@@ -56,7 +56,7 @@ const Body = styled.div`
   flex: 50%;
   height: 100%;
   @media (max-width: ${theme.medium}) {
-    line-height: 1vh;
+    line-height: 2vh;
     margin: 2vh 5vw 0vh 5vw;
   }
 `;
@@ -83,6 +83,7 @@ const NameText = styled.h6`
   padding-right: 1rem;
   line-height: 1.5vh;
   @media (max-width: ${theme.large}) {
+    line-height: 2.3vh;
     display: inline;
   }
 `;
