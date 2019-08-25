@@ -27,9 +27,7 @@ const Title = styled.h4`
 const Container = styled.div`
   text-align: left;
   padding: 0.7rem 1.2rem;
-  background: #106e75;
   flex: 1 1 20%;
-  height: 30vh;
 
   @media (max-width: ${theme.medium}) {
     padding: 1.1rem 0.7rem;

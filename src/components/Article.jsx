@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { theme } from '../GlobalStyles';
 
 const Container = styled.a`
   display: block;
@@ -17,7 +18,7 @@ const Image = styled.img`
 `;
 
 const ClickNotice = styled.p`
-  color: #fdcbbb;
+  color: ${theme.orange};
   font-size: 0.8rem;
   line-height: 1rem;
   display: block;

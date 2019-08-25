@@ -92,10 +92,11 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
   }
   h6 {
-    color: ${(props) => props.theme.darkGray};
-    font-size: 0.8rem;
-    font-weight: 700; 
+    color: ${(props) => props.theme.navy};
+    font-size: 1rem;
+    font-weight: 300; 
     margin: 0;
+    font-family: 'HalloEuroboy', sans-serif;
   }
   p {
     color: ${(props) => props.theme.navy};

@@ -15,14 +15,21 @@ const Container = styled.div`
 
 const MobileContainer = styled.div`
   background: ${theme.purple};
+  align-items: center;
+  justify-content: center;
+
+  max-height: 100%;
+  max-width: 100%;
+`;
+
+const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-top: 2.4vw;
   padding-bottom: 2.4vw;
-  max-height: 100%;
-  max-width: 100%;
+  width: 70%;
 `;
 
 const LeftDiv = styled.div`
@@ -49,9 +56,9 @@ const Title = styled.h3`
 const Body = styled.div`
   flex: 50%;
   height: 100%;
-  line-height: 1.5vw;
   @media (max-width: ${theme.medium}) {
-    line-height: 5px;
+    line-height: 1vh;
+    margin: 2vh 5vw 0vh 5vw;
   }
 `;
 
@@ -64,14 +71,20 @@ const Anchor = styled.a`
   color: inherit;
 `;
 
-const NameText = styled.p`
-  padding-left: 1rem;
-  padding-right: 1rem;
-  line-height: 2vw;
+const NameTextContainer = styled.div`
   @media (max-width: ${theme.large}) {
     margin-top: 2vh;
-    line-height: 2vh;
-    text-align: center;
+    line-height: 1vh;
+    width: 66%;
+  }
+`;
+
+const NameText = styled.h6`
+  padding-left: 1rem;
+  padding-right: 1rem;
+  line-height: 1.5vh;
+  @media (max-width: ${theme.large}) {
+    display: inline;
   }
 `;
 const DividerWithNames = (props) => {
@@ -96,6 +109,7 @@ const DividerWithNames = (props) => {
       </BodyText>
     </div>
   );
+
   const bodyToShow = body || defaultBody;
   return (
     <div>
@@ -114,8 +128,13 @@ const DividerWithNames = (props) => {
       </Desktop>
       <MobileAndTablet>
         <MobileContainer>
-          <Title>LIKE WHAT YOU SEE?</Title>
-          <NameText>{recognition}</NameText>
+          <TextContainer>
+            <Title>LIKE WHAT YOU SEE?</Title>
+            <Body>{bodyToShow}</Body>
+            <NameTextContainer>
+              <NameText>{recognition}</NameText>
+            </NameTextContainer>
+          </TextContainer>
         </MobileContainer>
       </MobileAndTablet>
     </div>
