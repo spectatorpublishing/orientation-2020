@@ -107,7 +107,7 @@ const MobileBannerRowDemo = [
   {
     title: 'MAPS',
     url: 'https://www.columbiaspectator.com/orientation-2018/campus-maps/',
-    color: 'pink',
+    color: theme.purple,
   },
 ];
 
