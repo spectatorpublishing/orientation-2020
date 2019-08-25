@@ -34,7 +34,7 @@ const Title = styled.h3`
   text-align: right;
   font-size: 4.2vw;
   @media (max-width: ${theme.large}) {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-top: 3vh;
   }
 `;
@@ -47,6 +47,8 @@ const Body = styled.div`
   line-height: 1.5vw;
   @media (max-width: ${theme.large}) {
     line-height: 2.2vh;
+    padding-left: 2.3rem;
+    padding-top: 0.15rem;
   }
 `;
 

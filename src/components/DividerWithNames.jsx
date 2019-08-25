@@ -123,7 +123,6 @@ const DividerWithNames = (props) => {
       </Desktop>
       <MobileAndTablet>
         <MobileContainer>
-          <Title>CREDITS</Title>
           <NameText>{recognition}</NameText>
         </MobileContainer>
       </MobileAndTablet>
