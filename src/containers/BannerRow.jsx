@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Desktop, Mobile } from 'react-responsive-simple/dist/App';
+import { Mobile, ResponsiveComponent } from 'react-responsive-simple/dist/App';
 import BannerButton from '../components/BannerButton';
+import { theme } from '../GlobalStyles';
 
 const Container = styled.div`
   display: flex;
@@ -11,19 +12,31 @@ const Container = styled.div`
   justify-content: space-around;
   margin: 1.5rem;
 
-  @media (max-width: 992px) {
+  @media (max-width: ${theme.medium}) {
     flex-direction: column;
     align-items: center;
   }
 `;
 
+const DesktopAndTablet = (props) => {
+  const { children } = props;
+  return <ResponsiveComponent min={768}>{children}</ResponsiveComponent>;
+};
+
+DesktopAndTablet.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+};
+
 const BannerRow = (props) => {
-  const { buttons, mobileButtons } = props;
+  const { id, buttons, mobileButtons } = props;
 
   return (
     <div>
-      <Desktop>
-        <Container>
+      <DesktopAndTablet>
+        <Container id={id}>
           {buttons.map((button) => (
             <BannerButton
               title={button.title}
@@ -34,9 +47,9 @@ const BannerRow = (props) => {
             />
           ))}
         </Container>
-      </Desktop>
+      </DesktopAndTablet>
       <Mobile>
-        <Container>
+        <Container id={id}>
           {mobileButtons.map((button) => (
             <BannerButton
               title={button.title}
@@ -53,6 +66,7 @@ const BannerRow = (props) => {
 };
 
 BannerRow.propTypes = {
+  id: PropTypes.string.isRequired,
   buttons: PropTypes.arrayOf(PropTypes.object).isRequired,
   mobileButtons: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
