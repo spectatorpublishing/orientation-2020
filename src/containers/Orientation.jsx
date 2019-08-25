@@ -104,6 +104,11 @@ const MobileBannerRowDemo = [
     url: '/orientation-2019/#/textbooks',
     color: '#9BDAE3',
   },
+  {
+    title: 'MAPS',
+    url: 'https://www.columbiaspectator.com/orientation-2018/campus-maps/',
+    color: 'pink',
+  },
 ];
 
 const StaffInfo = [

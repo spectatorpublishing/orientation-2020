@@ -117,6 +117,13 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 0.8rem;
     font-weight: 400; 
     margin: 0;
+    @media (min-width: ${theme.large}){
+      font-size: 1rem;
+    }
+    @media (min-width: ${theme.extraLarge}){
+      font-size: 1.3rem;
+
+    }
     
   }
 

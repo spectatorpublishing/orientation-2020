@@ -29,7 +29,6 @@ const TextContainer = styled.div`
   justify-content: center;
   padding-top: 2.4vw;
   padding-bottom: 2.4vw;
-  width: 70%;
 `;
 
 const LeftDiv = styled.div`
