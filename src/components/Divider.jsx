@@ -89,7 +89,7 @@ const Divider = (props) => {
   );
   const bodyToShow = body || defaultBody;
   return (
-    <>
+    <div>
       <Desktop>
         <Container>
           <LeftDiv>
@@ -106,7 +106,7 @@ const Divider = (props) => {
           <Body>{bodyToShow}</Body>
         </MobileContainer>
       </MobileAndTablet>
-    </>
+    </div>
   );
 };
 

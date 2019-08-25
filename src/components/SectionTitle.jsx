@@ -5,6 +5,7 @@ import { theme } from '../GlobalStyles';
 
 const MemberItem = styled.p`
   text-align: left;
+  line-height: 1.5rem;
   color: white;
 `;
 const Title = styled.h4`
@@ -18,9 +19,9 @@ const Title = styled.h4`
   line-height: 4.5vh;
 
   @media (max-width: ${theme.medium}) {
-    height: 10vw;
-    line-height: 6vw;
-    font-size: 6vw;
+    height: 3.5rem;
+    line-height: 2.3rem;
+    font-size: 2rem;
   }
 `;
 const Container = styled.div`

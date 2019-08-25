@@ -98,7 +98,7 @@ const DividerWithNames = (props) => {
   );
   const bodyToShow = body || defaultBody;
   return (
-    <>
+    <div>
       <Desktop>
         <Container>
           <LeftDiv>
@@ -118,7 +118,7 @@ const DividerWithNames = (props) => {
           <NameText>{recognition}</NameText>
         </MobileContainer>
       </MobileAndTablet>
-    </>
+    </div>
   );
 };
 DividerWithNames.propTypes = {

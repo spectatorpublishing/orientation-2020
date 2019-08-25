@@ -72,7 +72,7 @@ export const GlobalStyles = createGlobalStyle`
   h5 {
     @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,800');
     font-family: 'Raleway', sans-serif;
-    color: ${(props) => props.theme.black};
+    color: ${(props) => props.theme.navy};
     font-size: 1.5rem;
     font-weight: 400; 
     margin: 0;
@@ -98,7 +98,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   b {
-    color: ${(props) => props.theme.black};
+    color: ${(props) => props.theme.navy};
     font-size: 1.4rem;
     font-weight: 700;  
     margin: 0;
