@@ -59,7 +59,7 @@ const TitleContainer = styled.div`
 `;
 
 const Title = styled.h3`
-  color: white;
+  color: white !important;
 `;
 
 const StaffContainer = (props) => {
@@ -68,7 +68,7 @@ const StaffContainer = (props) => {
   return (
     <div>
       <Mobile>
-        <Container>
+        <Container id={id}>
           <Row>
             <TitleContainer>
               <Title>Staff</Title>
