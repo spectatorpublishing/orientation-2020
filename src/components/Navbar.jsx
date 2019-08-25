@@ -65,7 +65,7 @@ const ColumbiaSpectatorContainer = styled.div`
   width: 10vw;
   @media (max-width: ${theme.large}) {
     margin-left: 0vw;
-    width: 33vw;
+    width: 40vw;
   }
 `;
 
@@ -89,7 +89,7 @@ const burgerStyle = {
     position: 'relative',
     width: '35px',
     height: '30px',
-    left: '63vw',
+    left: '56vw',
     top: '0',
   },
   bmBurgerBars: {

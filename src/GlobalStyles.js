@@ -16,6 +16,7 @@ export const theme = {
   small: '576px',
   medium: '768px',
   large: '992px',
+  extraLarge: '1200px',
 };
 
 export const GlobalStyles = createGlobalStyle`
@@ -53,6 +54,8 @@ export const GlobalStyles = createGlobalStyle`
     @media (max-width: ${theme.medium}) {
       font-size: 2.6rem;
     }
+
+    
   }
   h3 {
     color: ${(props) => props.theme.navy};
@@ -61,6 +64,10 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 300;
     letter-spacing: 0.06em;
     margin: 0;
+
+    @media (min-width: ${theme.large}){
+      font-size: 4rem;
+    }
   }
   h4 {
     color: ${(props) => props.theme.orange};
@@ -68,6 +75,9 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: 300;
     font-family: 'HalloEuroboy', sans-serif;
     margin: 0;
+    @media (min-width: ${theme.extraLarge}){
+      font-size: 2.7rem;
+    }
   }
   h5 {
     @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,800');
@@ -88,6 +98,13 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 0.8rem;
     font-weight: 700; 
     margin: 0;
+    @media (min-width: ${theme.large}){
+      font-size: 1rem;
+    }
+    @media (min-width: ${theme.extraLarge}){
+      font-size: 1.3rem;
+
+    }
   }
   
   a {

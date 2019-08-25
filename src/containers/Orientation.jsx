@@ -14,39 +14,39 @@ import { theme } from '../GlobalStyles';
 
 const tocEntries = [
   {
-    title: 'Campus Life',
+    title: 'campus life',
     id: 'gettoknow',
   },
   {
-    title: 'Academics',
+    title: 'academics',
     id: 'gettoknow',
   },
   {
-    title: 'Courses We Loved',
+    title: 'courses we loved',
     id: 'banner',
   },
   {
-    title: '116 Things to do before Graduating',
+    title: '116 things to do before graduating',
     id: 'banner',
   },
   {
-    title: 'Textbooks',
+    title: 'textbooks',
     id: 'banner',
   },
   {
-    title: 'Maps',
+    title: 'maps',
     id: 'maps',
   },
   {
-    title: 'Stories to Follow',
+    title: 'stories to follow',
     id: 'stories',
   },
   {
-    title: 'Join the Discourse',
+    title: 'join the discourse',
     id: 'discourse',
   },
   {
-    title: 'Spectator Staff',
+    title: 'spectator staff',
     id: 'staff',
   },
 ];
