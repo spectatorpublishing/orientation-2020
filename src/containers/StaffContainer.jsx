@@ -136,7 +136,7 @@ const StaffContainer = (props) => {
         <Container id={id}>
           <Row>
             <TitleContainer>
-              <Title>Staff</Title>
+              <Title>STAFF</Title>
             </TitleContainer>
           </Row>
           <SectionRow>
