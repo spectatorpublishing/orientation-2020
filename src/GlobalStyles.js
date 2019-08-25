@@ -65,7 +65,7 @@ font-display:auto;font-style:italic;font-weight:300;
     color: ${(props) => props.theme.darkGray};
   }
   h1 {
-    color: ${(props) => props.theme.navy};
+    color: ${(props) => props.theme.navy} !important;
     font-family: 'HalloEuroboy', sans-serif;
     font-size: 8rem;
     font-weight: 400;
@@ -76,7 +76,7 @@ font-display:auto;font-style:italic;font-weight:300;
     }
   }
   h2 {
-    color: ${(props) => props.theme.navy};
+    color: ${(props) => props.theme.navy} !important;
     font-family: 'HalloEuroboy', sans-serif;
     font-size: 4.9rem;
     font-weight: 300;
@@ -89,7 +89,7 @@ font-display:auto;font-style:italic;font-weight:300;
     
   }
   h3 {
-    color: ${(props) => props.theme.navy};
+    color: ${(props) => props.theme.navy} !important;
     font-family: 'HalloEuroboy', sans-serif;
     font-size: 2.2rem;
     font-weight: 300;
@@ -123,14 +123,22 @@ font-display:auto;font-style:italic;font-weight:300;
     margin: 0;
   }
   h6 {
-    color: ${(props) => props.theme.navy};
+    color: ${(props) => props.theme.navy} !important;
     font-size: 1rem;
     font-weight: 300; 
     margin: 0;
     font-family: 'HalloEuroboy', sans-serif;
+
+    @media (min-width: ${theme.large}){
+      font-size: 1.2rem;
+    }
+    @media (min-width: ${theme.extraLarge}){
+      font-size: 1.4rem;
+
+    }
   }
   p {
-    color: ${(props) => props.theme.navy};
+    color: ${(props) => props.theme.navy} !important;
     font-size: 0.8rem;
     font-weight: 700; 
     margin: 0;
@@ -144,7 +152,7 @@ font-display:auto;font-style:italic;font-weight:300;
   }
   
   a {
-    color: ${(props) => props.theme.navy};
+    color: ${(props) => props.theme.navy} !important;
     font-size: 0.8rem;
     font-weight: 400; 
     margin: 0;
@@ -159,7 +167,7 @@ font-display:auto;font-style:italic;font-weight:300;
   }
 
   b {
-    color: ${(props) => props.theme.navy};
+    color: ${(props) => props.theme.navy} !important  ;
     font-size: 1.4rem;
     font-weight: 700;  
     margin: 0;

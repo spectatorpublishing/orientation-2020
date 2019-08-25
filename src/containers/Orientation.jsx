@@ -102,7 +102,7 @@ const MobileBannerRowDemo = [
   {
     title: 'GET YOUR TEXTBOOKS',
     url: '/orientation-2019/#/textbooks',
-    color: '#9BDAE3',
+    color: theme.navy,
   },
   {
     title: 'MAPS',
@@ -229,16 +229,7 @@ const StaffInfoMobile = [
       'Tassneen Bashir, Animations Deputy Editor',
     ],
   },
-  {
-    title: 'News',
-    members: [
-      'Karen Xia, News Editor',
-      'Valeria Escobar, Deputy News Editor',
-      'Shubham Saharan, Senior Staff Writer',
-      'Emma James, Senior Staff Writer',
-      'Nelson Luna, Staff Writer',
-    ],
-  },
+
   {
     title: 'Opinion',
     members: [
@@ -263,9 +254,20 @@ const StaffInfoMobile = [
       'Chenoa Gale, Developer',
     ],
   },
+
   {
     title: 'Spectrum',
     members: ['Grace Lin, Spectrum Editor'],
+  },
+  {
+    title: 'News',
+    members: [
+      'Karen Xia, News Editor',
+      'Valeria Escobar, Deputy News Editor',
+      'Shubham Saharan, Senior Staff Writer',
+      'Emma James, Senior Staff Writer',
+      'Nelson Luna, Staff Writer',
+    ],
   },
   {
     title: 'A&E',

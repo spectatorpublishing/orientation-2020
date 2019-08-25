@@ -42,7 +42,7 @@ const TableEntry = styled.div`
 `;
 
 const TableText = styled.p`
-  font-size: 1.8vh;
+  font-size: 2.2vh;
   font-weight: bold;
 
   &:hover {
@@ -52,7 +52,7 @@ const TableText = styled.p`
   @media (max-width: ${theme.medium}) {
     text-shadow: 2px 2px 4px white;
     margin-right: 2.5vw;
-    font-size: 0.8rem;
+    font-size: 3vh;
   }
 `;
 

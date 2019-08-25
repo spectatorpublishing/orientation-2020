@@ -70,20 +70,14 @@ const Anchor = styled.a`
   color: inherit;
 `;
 
-const NameTextContainer = styled.div`
-  @media (max-width: ${theme.large}) {
-    margin-top: 2vh;
-    line-height: 1vh;
-    width: 66%;
-  }
-`;
-
 const NameText = styled.h6`
   padding-left: 1rem;
   padding-right: 1rem;
-  line-height: 1.5vh;
+  line-height: 1.9vh;
+  text-transform: uppercase;
   @media (max-width: ${theme.large}) {
-    line-height: 2.3vh;
+    padding: 0;
+    line-height: 0;
     display: inline;
   }
 `;
@@ -109,6 +103,34 @@ const DividerWithNames = (props) => {
       </BodyText>
     </div>
   );
+  const defaultBodyMobile = (
+    <div>
+      <BodyText>
+        This website was created entirely by our tech and product design teams
+        here at Spectator.
+      </BodyText>
+      <br />
+      <BodyText>
+        Curious to see how it&apos;s done? Interested in doing this work
+        yourself?
+      </BodyText>
+      <br />
+      <BodyText>
+        <Anchor href={link}>Click here</Anchor>
+        <BodyText> to learn how to join our team</BodyText>
+      </BodyText>
+      <br />
+      <br />
+      <NameText>Cover art by: helen yang</NameText>
+      <br />
+      <NameText>Website design by: Cecilia ORDUÑA</NameText>
+      <br />
+      <NameText>
+        DEVELOPED BY: ARSALAAN ANSARI, WILLIAM CHIU, HARRISON WANG, ELAINE WANG,
+        BILL CHEN & CHENOA Gale
+      </NameText>
+    </div>
+  );
 
   const bodyToShow = body || defaultBody;
   return (
@@ -130,10 +152,7 @@ const DividerWithNames = (props) => {
         <MobileContainer>
           <TextContainer>
             <Title>LIKE WHAT YOU SEE?</Title>
-            <Body>{bodyToShow}</Body>
-            <NameTextContainer>
-              <NameText>{recognition}</NameText>
-            </NameTextContainer>
+            <Body>{defaultBodyMobile}</Body>
           </TextContainer>
         </MobileContainer>
       </MobileAndTablet>
