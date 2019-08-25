@@ -439,6 +439,7 @@ const Orientation = () => (
           link={entry.link}
           photoUrl={entry.photoUrl}
           headline={entry.headline}
+          linkColor={theme.orange}
         />
       ))}
     </DiscourseContainer>

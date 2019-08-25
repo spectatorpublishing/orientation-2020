@@ -52,7 +52,7 @@ const MapsList = styled.div`
 
       & p {
         padding: 0.3rem;
-        color: white;
+        color: white !important;
         font-weight: bold;
 
         @media (max-width: ${theme.large}) {
@@ -81,7 +81,7 @@ const MapDisplay = styled.div`
 `;
 
 const Title = styled.h3`
-  color: white;
+  color: white !important;
 `;
 
 export default class MapsContainer extends Component {

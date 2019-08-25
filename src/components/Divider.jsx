@@ -43,7 +43,7 @@ const Body = styled.div`
   height: 100%;
   padding: 0.8rem;
   padding-right: 4rem;
-  line-height: 2vh;
+  line-height: 2.2vh;
   @media (max-width: ${theme.large}) {
     line-height: 1.8vh;
     padding-left: 2.3rem;

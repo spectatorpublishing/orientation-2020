@@ -73,7 +73,7 @@ const Anchor = styled.a`
 const NameText = styled.h6`
   padding-left: 1rem;
   padding-right: 1rem;
-  line-height: 1.9vh;
+  line-height: 3vh;
   text-transform: uppercase;
   @media (max-width: ${theme.large}) {
     padding: 0;
@@ -103,6 +103,19 @@ const DividerWithNames = (props) => {
       </BodyText>
     </div>
   );
+
+  const defaultNames = (
+    <div>
+    <NameText>Cover art by: helen yang</NameText>
+      <br />
+      <NameText>Website design by: Cecilia ORDUÑA</NameText>
+      <br />
+      <NameText>
+        DEVELOPED BY: ARSALAAN ANSARI, WILLIAM CHIU, HARRISON WANG, ELAINE WANG,
+        BILL CHEN & CHENOA Gale
+      </NameText>
+    </div>
+  )
   const defaultBodyMobile = (
     <div>
       <BodyText>
@@ -143,7 +156,7 @@ const DividerWithNames = (props) => {
           </LeftDiv>
           <RightDiv>
             <div>
-              <NameText>{recognition}</NameText>
+              <NameText>{defaultNames}</NameText>
             </div>
           </RightDiv>
         </Container>

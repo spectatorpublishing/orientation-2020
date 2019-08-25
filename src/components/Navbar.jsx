@@ -40,7 +40,7 @@ const NavBarEntry = styled.div`
 `;
 
 const NavBarText = styled.a`
-  color: white;
+  color: white !important;
   font-family: "HalloEuroboy", sans-serif;
   font-size: 1.3rem;
 

@@ -130,10 +130,10 @@ font-display:auto;font-style:italic;font-weight:300;
     font-family: 'HalloEuroboy', sans-serif;
 
     @media (min-width: ${theme.large}){
-      font-size: 1.2rem;
+      font-size: 1.5rem;
     }
     @media (min-width: ${theme.extraLarge}){
-      font-size: 1.4rem;
+      font-size: 1.8rem;
 
     }
   }
