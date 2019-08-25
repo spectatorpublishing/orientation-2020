@@ -59,7 +59,7 @@ font-display:auto;font-style:italic;font-weight:300;
 }
   body,
   button {
-    font-family: 'basic-sans', sans-serif;
+    font-family: 'basic-sans', sans-serif !important; 
   }
   div {
     color: ${(props) => props.theme.darkGray};
