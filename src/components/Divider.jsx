@@ -27,7 +27,7 @@ const LeftDiv = styled.div`
 const RightDiv = styled.div`
   flex: 60%;
   margin: 0.4rem;
-  margin-left: 0;
+  margin-left: 4rem;
 `;
 const Title = styled.h3`
   color: #104a4f;
@@ -44,9 +44,9 @@ const Body = styled.div`
   height: 100%;
   padding: 0.8rem;
   padding-right: 4rem;
-  line-height: 2vw;
+  line-height: 1.5vw;
   @media (max-width: ${theme.large}) {
-    line-height: 2vh;
+    line-height: 2.2vh;
   }
 `;
 
@@ -73,10 +73,14 @@ const Divider = (props) => {
     <div>
       <BodyText>
         This website was created entirely by our tech and product design teams
-        here at Spectator. Curious to see how it&apos;s done?
+        here at Spectator.
       </BodyText>
       <br />
-      <BodyText>Interested in doing this work yourself? </BodyText>
+      <BodyText>
+        Curious to see how it&apos;s done? Interested in doing this work
+        yourself?
+        {' '}
+      </BodyText>
       <br />
       <BodyText>
         <Anchor href={link}>Click here</Anchor>
