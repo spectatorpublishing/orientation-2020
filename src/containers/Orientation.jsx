@@ -404,7 +404,7 @@ const Orientation = () => (
       buttons={BannerRowDemo}
       mobileButtons={MobileBannerRowDemo}
     />
-    <MapsContainer />
+    <MapsContainer id="maps" />
     <Carousel slides={storiesToFollowArticles} />
     <DiscourseContainer id="discourse">
       {JoinTheDiscourseData.map((entry) => (
