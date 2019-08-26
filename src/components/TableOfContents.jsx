@@ -89,6 +89,20 @@ const TableOfContents = (props) => {
                 <TableText>{entry.title}</TableText>
               </a>
             );
+          } else if (entry.id === 'maps') {
+            link = (
+              <a
+                href="https://www.columbiaspectator.com/orientation-2018/campus-maps/"
+                target="_blank"
+                rel="noopener noreferrer" // set to avoid potential data breach on the original page side;
+                // "noopener" denies access of the new page to the original,
+                // "noreferrer" prevents browser from sending original page address as referrer
+                style={{ textDecoration: 'none' }}
+              >
+                {' '}
+                <TableText>{entry.title}</TableText>
+              </a>
+            );
           }
           return <TableEntry>{link}</TableEntry>;
         })}

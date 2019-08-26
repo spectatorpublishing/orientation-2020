@@ -16,8 +16,8 @@ const navBarEntries = [
     linkUrl: '/orientation-2019',
   },
   {
-    title: 'CLUBS',
-    linkUrl: 'https://www.columbiaspectator.com/orientation-2018/campus-maps/',
+    title: 'STUDENT LIFE',
+    linkUrl: 'https://undergrad.admissions.columbia.edu/learn/studentlife/',
   },
   {
     title: 'REGISTRATION',
