@@ -86,7 +86,7 @@ font-display:auto;font-style:italic;font-weight:300;
       font-size: 2.6rem;
     }
 
-    
+
   }
   h3 {
     color: ${(props) => props.theme.navy} !important;
@@ -119,7 +119,7 @@ font-display:auto;font-style:italic;font-weight:300;
     font-family: 'Raleway', sans-serif;
     color: ${(props) => props.theme.navy};
     font-size: 1.5rem;
-    font-weight: 400; 
+    font-weight: 400;
     margin: 0;
   }
   h6 {
@@ -140,7 +140,7 @@ font-display:auto;font-style:italic;font-weight:300;
   p {
     color: ${(props) => props.theme.navy} !important;
     font-size: 0.8rem;
-    font-weight: 700; 
+    font-weight: 700;
     margin: 0;
     @media (min-width: ${theme.large}){
       font-size: 1rem;
@@ -150,11 +150,11 @@ font-display:auto;font-style:italic;font-weight:300;
 
     }
   }
-  
+
   a {
     color: ${(props) => props.theme.navy} !important;
     font-size: 0.8rem;
-    font-weight: 400; 
+    font-weight: 400;
     margin: 0;
     @media (min-width: ${theme.large}){
       font-size: 1rem;
@@ -169,7 +169,7 @@ font-display:auto;font-style:italic;font-weight:300;
   b {
     color: ${(props) => props.theme.navy} !important  ;
     font-size: 1.4rem;
-    font-weight: 700;  
+    font-weight: 700;
     margin: 0;
   }
 `;

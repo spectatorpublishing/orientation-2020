@@ -20,6 +20,10 @@ const NavBarContainer = styled.div`
     margin-left: 2vw;
   }
 
+  & > :first-child {
+    margin-left: 2vw;
+  }
+
   @media (max-width: ${theme.large}) {
     display: flex;
     align-items: center;
