@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { theme } from '../GlobalStyles';
 
 const OuterContainer = styled.div`
-  margin: 5vh 3vw;
+  margin: 10vh 3vw 5vh 3vw;
 `;
 
 const InnerContainer = styled.div`
   display: flex;
-  border: 2px #fdcbbb solid;
+  border: 2px ${theme.orange} solid;
   margin-top: 5rem;
 `;
 

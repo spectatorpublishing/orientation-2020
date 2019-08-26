@@ -6,9 +6,11 @@ import { theme } from '../GlobalStyles';
 const MemberItem = styled.p`
   text-align: left;
   line-height: 1.5rem;
-  color: white;
+  color: white !important 
+  ;
 `;
 const Title = styled.h4`
+  font-size: 2rem;
   margin-bottom: 0.6rem;
   color: white;
   display: flex;
@@ -17,19 +19,17 @@ const Title = styled.h4`
   text-align: center;
   height: 7.5vh;
   line-height: 4.5vh;
+  text-transform: uppercase;
 
   @media (max-width: ${theme.medium}) {
     height: 3.5rem;
     line-height: 2.3rem;
-    font-size: 2rem;
   }
 `;
 const Container = styled.div`
   text-align: left;
   padding: 0.7rem 1.2rem;
-  background: #106e75;
   flex: 1 1 20%;
-  height: 30vh;
 
   @media (max-width: ${theme.medium}) {
     padding: 1.1rem 0.7rem;

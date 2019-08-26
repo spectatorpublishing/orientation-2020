@@ -30,9 +30,8 @@ const NavigationContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
   width: 100vw;
-  top: 40%;
+  height: 4rem;
 `;
 
 const ArrowContainer = styled.div`
@@ -86,6 +85,10 @@ const DesktopContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   overflow: hidden;
+  & li {
+    height: 0;
+    display: inline-block;
+  }
 `;
 
 const MobileContainer = styled.div`
@@ -114,7 +117,7 @@ const TitleContainer = styled.div`
 
 const Title = styled.h3`
   text-transform: uppercase;
-  color: ${theme.purple};
+  color: ${theme.purple} !important;
 `;
 
 // just in case we still need the svgs: here they are
@@ -161,6 +164,7 @@ const Carousel = (props) => {
                         photoAlt={entry.photoAlt}
                         photoUrl={entry.photoUrl}
                         headline={entry.headline}
+                        linkColor={theme.purple}
                       />
                     ))}
                   </ArticleRowWrapper>
@@ -189,6 +193,7 @@ const Carousel = (props) => {
                 photoAlt={article.photoAlt}
                 photoUrl={article.photoUrl}
                 headline={article.headline}
+                linkColor={theme.purple}
               />
             )))}
           </ArticleContainer>
