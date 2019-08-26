@@ -3,35 +3,32 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { theme } from '../GlobalStyles';
 
-const MemberItem = styled.h4`
+const MemberItem = styled.p`
   text-align: left;
-  color: white;
-
-  @media (max-width: ${theme.medium}) {
-    font-size: 3.5vw;
-  }
+  line-height: 1.5rem;
+  color: white !important 
+  ;
 `;
-const Title = styled.h3`
+const Title = styled.h4`
+  font-size: 2rem;
   margin-bottom: 0.6rem;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 4.5vh;
   height: 7.5vh;
   line-height: 4.5vh;
+  text-transform: uppercase;
 
   @media (max-width: ${theme.medium}) {
-    height: 10vw;
-    line-height: 6vw;
-    font-size: 6vw;
+    height: 3.5rem;
+    line-height: 2.3rem;
   }
 `;
 const Container = styled.div`
   text-align: left;
   padding: 0.7rem 1.2rem;
-  background: #106e75;
   flex: 1 1 20%;
 
   @media (max-width: ${theme.medium}) {

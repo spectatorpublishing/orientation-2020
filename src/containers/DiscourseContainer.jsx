@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { theme } from '../GlobalStyles';
 
 const OuterContainer = styled.div`
-  margin: 5vh 3vw;
+  margin: 10vh 3vw 5vh 3vw;
 `;
 
 const InnerContainer = styled.div`
   display: flex;
-  border: 2px #fdcbbb solid;
+  border: 2px ${theme.orange} solid;
   margin-top: 5rem;
 `;
 
@@ -38,13 +39,13 @@ const Header = styled.h3`
   text-transform: uppercase;
 
   @media only screen and (max-width: ${(props) => props.theme.small}) {
-    font-size: 15vw; /* Will change with font change */
     margin-right: -20vw; /* Will change with font change */
   }
 `;
 
 const Description = styled.p`
   font-style: italic;
+  font-size: 1.5rem;
 
   @media only screen and (max-width: ${(props) => props.theme.small}) {
     font-size: 4vw; /* Will change with font change */
@@ -64,8 +65,6 @@ const ArticleContainer = styled.div`
     flex: 1 1 33%;
     min-width: 20rem;
     direction: ltr;
-    display: flex;
-    flex-wrap: wrap;
     padding: 1rem;
 
     @media only screen and (max-width: ${(props) => props.theme.small}) {

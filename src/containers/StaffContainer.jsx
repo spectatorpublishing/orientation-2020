@@ -1,27 +1,15 @@
 import styled from 'styled-components';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Mobile, ResponsiveComponent } from 'react-responsive-simple';
+import { Mobile, Tablet, Desktop } from 'react-responsive-simple';
 import SectionTitle from '../components/SectionTitle';
 import { theme } from '../GlobalStyles';
-
-const DesktopAndTablet = (props) => {
-  const { children } = props;
-  return <ResponsiveComponent min={768}>{children}</ResponsiveComponent>;
-};
-
-DesktopAndTablet.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
-};
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  background: #106e75;
+  background: ${theme.navy};
   align-items: center;
   padding: 1.5rem 2.5rem;
 
@@ -40,9 +28,9 @@ const SectionRow = styled.div`
   flex-direction: row;
   align-items: ${(props) => (props.mobile ? 'stretch' : 'flex-start')};
   justify-content: ${(props) => (props.mobile ? 'space-around' : 'center')};
-  margin: 5vh 5vw 0vh 5vw;
+  margin: 0vh 5vw 0vh 5vw;
   flex-wrap: wrap;
-  width: ${(props) => (props.mobile ? '100%' : 'auto')};
+  width: 100%;
 
   &::after {
     content: "";
@@ -55,18 +43,23 @@ const Col = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 1 1 30%;
+  flex: 1 1 20%;
   text-align: center;
+
+  @media (max-width: ${theme.medium}) {
+    flex: 1 1 35%;
+  }
 `;
 
 const TitleContainer = styled.div`
   text-align: center;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
 `;
 
-const Title = styled.h2`
-  color: white;
+const Title = styled.h3`
+  color: white !important;
 `;
 
 const StaffContainer = (props) => {
@@ -75,10 +68,10 @@ const StaffContainer = (props) => {
   return (
     <div>
       <Mobile>
-        <Container>
+        <Container id={id}>
           <Row>
             <TitleContainer>
-              <Title>Staff</Title>
+              <Title>STAFF</Title>
             </TitleContainer>
           </Row>
           <SectionRow mobile>
@@ -100,20 +93,93 @@ const StaffContainer = (props) => {
         </Container>
       </Mobile>
 
-      <DesktopAndTablet>
+      <Tablet>
         <Container id={id}>
           <Row>
             <TitleContainer>
-              <Title>Staff</Title>
+              <Title>STAFF</Title>
             </TitleContainer>
           </Row>
           <SectionRow>
-            {staffInfo.map((info) => (
-              <SectionTitle title={info.title} members={info.members} />
-            ))}
+            <Col>
+              {staffInfo
+                .slice(0, Math.floor(staffInfo.length / 3))
+                .map((info) => (
+                  <SectionTitle title={info.title} members={info.members} />
+                ))}
+            </Col>
+            <Col>
+              {staffInfo
+                .slice(
+                  Math.floor(staffInfo.length / 3),
+                  Math.floor((staffInfo.length / 3) * 2 - 1),
+                )
+                .map((info) => (
+                  <SectionTitle title={info.title} members={info.members} />
+                ))}
+            </Col>
+            <Col>
+              {staffInfo
+                .slice(
+                  Math.floor((staffInfo.length / 3) * 2 - 1),
+                  staffInfo.length + 1,
+                )
+                .map((info) => (
+                  <SectionTitle title={info.title} members={info.members} />
+                ))}
+            </Col>
           </SectionRow>
         </Container>
-      </DesktopAndTablet>
+      </Tablet>
+
+      <Desktop>
+        <Container id={id}>
+          <Row>
+            <TitleContainer>
+              <Title>STAFF</Title>
+            </TitleContainer>
+          </Row>
+          <SectionRow>
+            <Col>
+              {staffInfo
+                .slice(0, Math.floor(staffInfo.length / 4))
+                .map((info) => (
+                  <SectionTitle title={info.title} members={info.members} />
+                ))}
+            </Col>
+            <Col>
+              {staffInfo
+                .slice(
+                  Math.floor(staffInfo.length / 4),
+                  Math.floor(staffInfo.length / 2),
+                )
+                .map((info) => (
+                  <SectionTitle title={info.title} members={info.members} />
+                ))}
+            </Col>
+            <Col>
+              {staffInfo
+                .slice(
+                  Math.floor(staffInfo.length / 2),
+                  Math.floor((staffInfo.length / 4) * 3),
+                )
+                .map((info) => (
+                  <SectionTitle title={info.title} members={info.members} />
+                ))}
+            </Col>
+            <Col>
+              {staffInfo
+                .slice(
+                  Math.floor((staffInfo.length / 4) * 3),
+                  staffInfo.length + 1,
+                )
+                .map((info) => (
+                  <SectionTitle title={info.title} members={info.members} />
+                ))}
+            </Col>
+          </SectionRow>
+        </Container>
+      </Desktop>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import { theme } from '../GlobalStyles';
 
 const Button = styled.a`
   position: relative;
@@ -43,13 +44,19 @@ const Inner = styled.div`
   }
 `;
 
+const ButtonText = styled.h4`
+  color: ${theme.orange};
+`;
+
 const Buttons = (props) => {
   const {
     getToKnow: { tab, tabLink },
   } = props;
   return (
     <Button href={tabLink} target="_blank" rel="noopener noreferrer">
-      <Inner>{tab}</Inner>
+      <Inner>
+        <ButtonText>{tab}</ButtonText>
+      </Inner>
     </Button>
   );
 };

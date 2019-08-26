@@ -8,6 +8,7 @@ const Table = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
 const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -26,8 +27,8 @@ const Container = styled.div`
 const Border = styled.div`
   height: auto;
   border: 2px solid;
-  border-color: #f47263;
-  border-radius: 10px;
+  border-color: ${theme.yellow};
+  margin-bottom: 2vh;
 `;
 
 const TableEntry = styled.div`
@@ -42,16 +43,17 @@ const TableEntry = styled.div`
 
 const TableText = styled.p`
   font-size: 2.2vh;
+  font-weight: bold;
 
   &:hover {
     color: ${theme.purple};
-    fontStyle: 'italic;
+    fontStyle: 'italic';
   }
 
-  @media (max-width: ${theme.large}) {
+  @media (max-width: ${theme.medium}) {
     text-shadow: 2px 2px 4px white;
     margin-right: 2.5vw;
-    font-size: 1.4rem;
+    font-size: 3vh;
   }
   text-transform: lowercase;
 `;
@@ -63,20 +65,34 @@ const TableOfContents = (props) => {
       <Table>
         {entries.map((entry) => {
           const linkUrL = `#${entry.id}`;
-          return (
-            <TableEntry>
-              <Link
-                smooth
-                to={linkUrL}
-                style={{
-                  textDecorationLine: 'none',
-                }}
-                id={linkUrL}
-              >
-                <TableText>{entry.title}</TableText>
-              </Link>
-            </TableEntry>
+          let link = (
+            <Link
+              smooth
+              to={linkUrL}
+              style={{
+                textDecorationLine: 'none',
+              }}
+              id={linkUrL}
+            >
+              <TableText>{entry.title}</TableText>
+            </Link>
           );
+          if (entry.id === 'print') {
+            link = (
+              <a
+                href="https://drive.google.com/file/d/1pQH9_sq7CxXspCQGbp6iwN0aRc6Of5pg/view"
+                target="_blank"
+                rel="noopener noreferrer" // set to avoid potential data breach on the original page side;
+                // "noopener" denies access of the new page to the original,
+                // "noreferrer" prevents browser from sending original page address as referrer
+                style={{ textDecoration: 'none' }}
+              >
+                {' '}
+                <TableText>{entry.title}</TableText>
+              </a>
+            );
+          }
+          return <TableEntry>{link}</TableEntry>;
         })}
       </Table>
       <Border />

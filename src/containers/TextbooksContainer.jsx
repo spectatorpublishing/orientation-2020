@@ -3,7 +3,19 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { theme } from '../GlobalStyles';
 
-const OuterContainer = styled.div``;
+const OuterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const InnerContainer = styled.div`
+  width: 75%;
+  @media (max-width: ${theme.medium}) {
+    width: 90%;
+  }
+`;
 
 const Row = styled.div`
   display: flex;
@@ -21,6 +33,8 @@ const Title = styled.h2`
   text-align: center;
 `;
 
+const Subtitle = styled.h2``;
+
 const MapsList = styled.div`
   padding: 3rem;
   border: 1rem;
@@ -32,13 +46,12 @@ const MapsList = styled.div`
 `;
 
 const ReferralLink = styled.a`
-  font-size: 2vw;
   &:hover {
     color: ${theme.navy};
   }
 
   @media (max-width: ${theme.medium}) {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 `;
 
@@ -85,39 +98,41 @@ const TextbooksContainer = (props) => {
   return (
     <OuterContainer>
       <Title>{title}</Title>
-      <Row>
-        <MapsList color={theme.purple}>
-          <h2>Lithum</h2>
-          {lithumData.map((entry) => (
-            <LinkContainer>
-              <ReferralLink
-                href={entry.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: 'none' }}
-              >
-                {entry.title}
-              </ReferralLink>
-            </LinkContainer>
-          ))}
-        </MapsList>
+      <InnerContainer>
+        <Row>
+          <MapsList color={theme.purple}>
+            <Subtitle>Lithum</Subtitle>
+            {lithumData.map((entry) => (
+              <LinkContainer>
+                <ReferralLink
+                  href={entry.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: 'none' }}
+                >
+                  {entry.title}
+                </ReferralLink>
+              </LinkContainer>
+            ))}
+          </MapsList>
 
-        <MapsList color={theme.orange}>
-          <h2>SEAS</h2>
-          {seasData.map((entry) => (
-            <LinkContainer>
-              <ReferralLink
-                href={entry.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: 'none' }}
-              >
-                {entry.title}
-              </ReferralLink>
-            </LinkContainer>
-          ))}
-        </MapsList>
-      </Row>
+          <MapsList color={theme.orange}>
+            <h2>SEAS</h2>
+            {seasData.map((entry) => (
+              <LinkContainer>
+                <ReferralLink
+                  href={entry.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: 'none' }}
+                >
+                  {entry.title}
+                </ReferralLink>
+              </LinkContainer>
+            ))}
+          </MapsList>
+        </Row>
+      </InnerContainer>
     </OuterContainer>
   );
 };

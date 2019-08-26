@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { ResponsiveComponent } from 'react-responsive-simple';
 import mapsData from '../data/MapsData';
 import { theme } from '../GlobalStyles';
 
@@ -15,6 +16,11 @@ const Row = styled.div`
     flex-direction: column-reverse;
     margin: unset;
   }
+
+  & * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
 `;
 
 const MapsList = styled.div`
@@ -23,48 +29,39 @@ const MapsList = styled.div`
   border: 1rem;
   box-sizing: border-box !important;
   & > div {
-    background: #f9b5ed;
+    background: #ffd05f;
     padding: 2rem;
     position: relative;
     box-sizing: border-box !important;
 
-    &:after {
-      content: " ";
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      box-sizing: border-box !important;
-      top: -0.6rem;
-      right: -0.6rem;
-      z-index: -1;
-      border: 0.2rem solid #f26d5b;
-    }
-
     & h2 {
       color: white;
+      text-transform: uppercase;
+      @media (max-width: ${theme.large}) {
+        text-align: center;
+      }
     }
 
     & div {
+      cursor: pointer;
       transform: translateX(1rem);
 
       &:focus {
         outline: none;
       }
 
-      &:hover:not(.active) {
-        transform: translateX(2rem);
-      }
-
+      &:hover,
       &.active {
-        transform: translateX(0rem);
+        font-style: italic;
       }
 
       & p {
-        color: white;
-        font-size: 1.2rem;
+        padding: 0.3rem;
+        color: white !important;
+        font-weight: bold;
 
-        &:hover {
-          color: ${theme.purple};
+        @media (max-width: ${theme.large}) {
+          font-size: 1rem;
         }
       }
     }
@@ -84,7 +81,12 @@ const MapDisplay = styled.div`
 
   @media only screen and (max-width: ${(props) => props.theme.medium}) {
     height: 100vh;
+    -webkit-overflow-scrolling: touch;
   }
+`;
+
+const Title = styled.h3`
+  color: white !important;
 `;
 
 export default class MapsContainer extends Component {
@@ -105,28 +107,32 @@ export default class MapsContainer extends Component {
   render() {
     const { currentMap } = this.state;
     return (
-      <Row>
-        <MapsList>
-          <div>
-            <h2>Maps</h2>
-            {mapsData.map(({ name, link }, i) => (
-              <div
-                key={name}
-                onClick={this.handleSelect}
-                onKeyDown={this.handleClick}
-                role="button"
-                tabIndex={i}
-                className={link === currentMap ? 'active' : false}
-              >
-                <p>{name}</p>
+      <>
+        <ResponsiveComponent min={768}>
+          <Row>
+            <MapsList>
+              <div>
+                <Title>MAPS</Title>
+                {mapsData.map(({ name, link }, i) => (
+                  <div
+                    key={name}
+                    onClick={this.handleSelect}
+                    onKeyDown={this.handleClick}
+                    role="button"
+                    tabIndex={i}
+                    className={link === currentMap ? 'active' : false}
+                  >
+                    <p>{name}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </MapsList>
-        <MapDisplay id="map">
-          <iframe title="map-iframe" src={currentMap} />
-        </MapDisplay>
-      </Row>
+            </MapsList>
+            <MapDisplay id="map">
+              <iframe title="map-iframe" src={currentMap} />
+            </MapDisplay>
+          </Row>
+        </ResponsiveComponent>
+      </>
     );
   }
 }

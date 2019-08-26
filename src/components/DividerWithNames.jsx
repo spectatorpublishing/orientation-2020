@@ -15,14 +15,20 @@ const Container = styled.div`
 
 const MobileContainer = styled.div`
   background: ${theme.purple};
+  align-items: center;
+  justify-content: center;
+
+  max-height: 100%;
+  max-width: 100%;
+`;
+
+const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-top: 2.4vw;
   padding-bottom: 2.4vw;
-  max-height: 100%;
-  max-width: 100%;
 `;
 
 const LeftDiv = styled.div`
@@ -40,10 +46,8 @@ const RightDiv = styled.div`
 const Title = styled.h3`
   flex: 50%;
   color: #09093b;
-  font-size: 4.2vw;
   line-height: 6vw;
-  @media (max-width: 420px) {
-    font-size: 2rem;
+  @media (max-width: ${theme.medium}) {
     margin-top: 2.5vh;
   }
 `;
@@ -51,17 +55,15 @@ const Title = styled.h3`
 const Body = styled.div`
   flex: 50%;
   height: 100%;
-  line-height: 1.5vw;
-  @media (max-width: 420px) {
-    line-height: 5px;
+  line-height: 3.5vh;
+  @media (max-width: ${theme.medium}) {
+    line-height: 2vh;
+    margin: 2vh 5vw 0vh 5vw;
   }
 `;
 
 const BodyText = styled.p`
-  font-size: 1.3vw;
-  color: #09093b;
   display: inline;
-  font-weight: 500;
 `;
 
 const Anchor = styled.a`
@@ -69,29 +71,24 @@ const Anchor = styled.a`
   color: inherit;
 `;
 
-const NameText = styled.p`
-  color: #09093b;
-  font-weight: 700;
-  font-size: 1.25vw;
+const NameText = styled.h6`
   padding-left: 1rem;
   padding-right: 1rem;
-  line-height: 2vw;
+  line-height: 4.2vh;
+  text-transform: uppercase;
   @media (max-width: ${theme.large}) {
-    margin-top: 2vh;
-    font-size: 2.5vw;
-    line-height: 2vh;
-    text-align: center;
+    padding: 0;
+    line-height: 1.5vh;
+    display: inline;
   }
 `;
 const DividerWithNames = (props) => {
-  const {
-    title, body, link, recognition,
-  } = props;
+  const { title, body, link } = props;
   const defaultBody = (
     <div>
       <BodyText>
-        This website was created entirely by our tech and design teams here at
-        Spectator.
+        This website was created entirely by our tech and product design teams
+        here at Spectator.
       </BodyText>
       <br />
       <BodyText>
@@ -105,9 +102,51 @@ const DividerWithNames = (props) => {
       </BodyText>
     </div>
   );
+
+  const defaultNames = (
+    <div>
+      <NameText>Cover art by: helen yang</NameText>
+      <br />
+      <NameText>Website design by: Cecilia ORDUÑA</NameText>
+      <br />
+      <NameText>
+        DEVELOPED BY: ARSALAAN ANSARI, WILLIAM CHIU, HARRISON WANG, ELAINE WANG,
+        Matthew Vanegas & CHENOA Gale
+      </NameText>
+    </div>
+  );
+  const defaultBodyMobile = (
+    <div>
+      <BodyText>
+        This website was created entirely by our tech and product design teams
+        here at Spectator.
+      </BodyText>
+      <br />
+      <BodyText>
+        Curious to see how it&apos;s done? Interested in doing this work
+        yourself?
+      </BodyText>
+      <br />
+      <BodyText>
+        <Anchor href={link}>Click here</Anchor>
+        <BodyText> to learn how to join our team</BodyText>
+      </BodyText>
+      <br />
+      <br />
+      <NameText>Cover art by: helen yang</NameText>
+      <br />
+      <NameText>Website design by: Cecilia ORDUÑA</NameText>
+      <br />
+      <NameText>
+        DEVELOPED BY: ARSALAAN ANSARI, WILLIAM CHIU, HARRISON WANG, ELAINE WANG,
+        Matthew Vanegas & CHENOA Gale
+      </NameText>
+    </div>
+  );
+
   const bodyToShow = body || defaultBody;
   return (
-    <>
+    <div>
       <Desktop>
         <Container>
           <LeftDiv>
@@ -116,24 +155,25 @@ const DividerWithNames = (props) => {
           </LeftDiv>
           <RightDiv>
             <div>
-              <NameText>{recognition}</NameText>
+              <NameText>{defaultNames}</NameText>
             </div>
           </RightDiv>
         </Container>
       </Desktop>
       <MobileAndTablet>
         <MobileContainer>
-          <Title>CREDITS</Title>
-          <NameText>{recognition}</NameText>
+          <TextContainer>
+            <Title>LIKE WHAT YOU SEE?</Title>
+            <Body>{defaultBodyMobile}</Body>
+          </TextContainer>
         </MobileContainer>
       </MobileAndTablet>
-    </>
+    </div>
   );
 };
 DividerWithNames.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  recognition: PropTypes.string.isRequired,
 };
 export default DividerWithNames;
