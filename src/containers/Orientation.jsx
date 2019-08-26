@@ -49,6 +49,10 @@ const tocEntries = [
     title: 'spectator staff',
     id: 'staff',
   },
+  {
+    title: 'print issue',
+    id: 'print',
+  },
 ];
 
 const BannerRowDemo = [

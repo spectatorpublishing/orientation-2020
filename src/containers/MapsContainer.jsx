@@ -107,7 +107,7 @@ export default class MapsContainer extends Component {
           <Row>
             <MapsList>
               <div>
-                <Title>Maps</Title>
+                <Title>MAPS</Title>
                 {mapsData.map(({ name, link }, i) => (
                   <div
                     key={name}

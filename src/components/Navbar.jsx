@@ -11,7 +11,7 @@ const NavBarContainer = styled.div`
   display: flex;
   flex-direction: inline-row;
   height: 6vh;
-  background: black;
+  background: ${theme.navy};
   justify-content: space-between;
   align-items: center;
   color: ${theme.navy};
