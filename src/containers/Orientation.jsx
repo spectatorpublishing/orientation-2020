@@ -423,7 +423,7 @@ const Orientation = () => (
     <Divider
       title="LIKE WHAT YOU SEE?"
       body={false}
-      link="https://www.columbiaspectator.com"
+      link="http://www.specpublishing.com/join"
     />
     <GetToKnow
       id="gettoknow"
@@ -450,7 +450,7 @@ const Orientation = () => (
     <DividerWithNames
       title="LIKE WHAT YOU SEE?"
       body={false}
-      link="https://www.columbiaspectator.com"
+      link="http://www.specpublishing.com/join"
       recognition={recognition}
     />
     <StaffContainer
