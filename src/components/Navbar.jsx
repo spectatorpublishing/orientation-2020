@@ -10,6 +10,8 @@ const logoUrl = 'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/pub
 const NavBarContainer = styled.div`
   display: flex;
   flex-direction: inline-row;
+  position: sticky;
+  top: 100px;
   height: 6vh;
   background: ${theme.navy};
   justify-content: space-between;
@@ -65,6 +67,7 @@ const ColumbiaSpectatorContainer = styled.div`
   align-items: center;
   justify-content: center;
   background: ${theme.yellow};
+  text-align: center;
   height: 100%;
   width: 10vw;
   @media (max-width: ${theme.large}) {
@@ -161,7 +164,12 @@ export default class Navbar extends Component {
               );
             })}
             <ColumbiaSpectatorContainer>
-              <ColumbiaSpectator src={logoUrl} />
+              <a
+                href="https://www.columbiaspectator.com/"
+                aria-label="image link"
+              >
+                <ColumbiaSpectator src={logoUrl} />
+              </a>
             </ColumbiaSpectatorContainer>
           </NavBarContainer>
         </Desktop>

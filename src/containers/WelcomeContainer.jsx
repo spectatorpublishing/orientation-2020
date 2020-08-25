@@ -78,7 +78,7 @@ const WelcomeContainer = (props) => {
             <Column>
               <TextContainer>
                 <Title>WELCOME</Title>
-                <Subtitle>CLASS OF 2023</Subtitle>
+                <Subtitle>CLASS OF 2024</Subtitle>
                 <Italicized>
                   Select an option below to explore your orientation guide
                 </Italicized>
@@ -93,7 +93,7 @@ const WelcomeContainer = (props) => {
         <Container>
           <TextContainer>
             <Title>WELCOME</Title>
-            <Subtitle>CLASS OF 2023</Subtitle>
+            <Subtitle>CLASS OF 2024</Subtitle>
             <Italicized>
               Select an option below to explore your orientation guide
             </Italicized>

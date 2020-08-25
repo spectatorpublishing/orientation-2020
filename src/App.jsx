@@ -9,30 +9,27 @@ import Navbar from './components/Navbar';
 import BarnumbiaData from './data/BarnumbiaData';
 import RegistrationData from './data/RegistrationData';
 import StudentLifeData from './data/StudentLifeData';
+import AcademicsData from './data/AcademicsData';
 
 const navBarEntries = [
   {
     title: 'HOME',
-    linkUrl: '/orientation-2019',
+    linkUrl: '/orientation-2020',
+  },
+  {
+    title: 'ACADEMICS',
+    linkUrl: '/orientation-2020/#/academics',
+  },
+  {
+    title: 'ZOOM UNIVERSITY',
+    linkUrl: '/orientation-2020/#/registration',
   },
   {
     title: 'STUDENT LIFE',
-    linkUrl: 'https://undergrad.admissions.columbia.edu/learn/studentlife/',
+    linkUrl: '/orientation-2020/#/barnumbia',
   },
   {
-    title: 'REGISTRATION',
-    linkUrl: '/orientation-2019/#/registration',
-  },
-  {
-    title: 'GET TO KNOW BARNUMBIA',
-    linkUrl: '/orientation-2019/#/barnumbia',
-  },
-  {
-    title: 'MAPS',
-    linkUrl: 'https://www.columbiaspectator.com/orientation-2018/campus-maps/',
-  },
-  {
-    title: '116 TRADITIONS',
+    title: '24 TRADITIONS',
     linkUrl:
       'https://www.columbiaspectator.com/orientation-2018/116-traditions/',
   },
@@ -45,6 +42,7 @@ const home = () => <Orientation />;
 const barnumbia = () => (
   <Subpage title="GET TO KNOW BARNUMBIA" data={BarnumbiaData} />
 );
+const academics = () => <Subpage title="ACADEMICS" data={AcademicsData} />;
 const course = () => (
   <Subpage title="COURSE REGISTRATION" data={RegistrationData} />
 );
@@ -62,6 +60,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={home} />
           <Route exact path="/barnumbia" component={barnumbia} />
+          <Route exact path="/academics" component={academics} />
           <Route exact path="/registration" component={course} />
           <Route exact path="/campus" component={campus} />
           <Route exact path="/textbooks" component={textbooks} />
