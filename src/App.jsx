@@ -8,8 +8,9 @@ import { GlobalStyles, theme } from './GlobalStyles';
 import Navbar from './components/Navbar';
 import BarnumbiaData from './data/BarnumbiaData';
 import RegistrationData from './data/RegistrationData';
-import StudentLifeData from './data/StudentLifeData';
+import CampusLifeData from './data/CampusLifeData';
 import AcademicsData from './data/AcademicsData';
+import StudentLifeData from './data/StudentLifeData';
 
 const navBarEntries = [
   {
@@ -26,7 +27,7 @@ const navBarEntries = [
   },
   {
     title: 'STUDENT LIFE',
-    linkUrl: '/orientation-2020/#/barnumbia',
+    linkUrl: '/orientation-2020/#/studentlife',
   },
   {
     title: '24 TRADITIONS',
@@ -43,11 +44,15 @@ const barnumbia = () => (
   <Subpage title="GET TO KNOW BARNUMBIA" data={BarnumbiaData} />
 );
 const academics = () => <Subpage title="ACADEMICS" data={AcademicsData} />;
+const studentlife = () => (
+  <Subpage title="STUDENT LIFE" data={StudentLifeData} />
+);
+
 const course = () => (
   <Subpage title="COURSE REGISTRATION" data={RegistrationData} />
 );
 
-const campus = () => <Subpage title="CAMPUS LIFE" data={StudentLifeData} />;
+const campus = () => <Subpage title="CAMPUS LIFE" data={CampusLifeData} />;
 
 const textbooks = () => <TextbooksContainer title="TEXTBOOK LINKS" />;
 
@@ -61,6 +66,7 @@ function App() {
           <Route exact path="/" component={home} />
           <Route exact path="/barnumbia" component={barnumbia} />
           <Route exact path="/academics" component={academics} />
+          <Route exact path="/studentlife" component={studentlife} />
           <Route exact path="/registration" component={course} />
           <Route exact path="/campus" component={campus} />
           <Route exact path="/textbooks" component={textbooks} />
