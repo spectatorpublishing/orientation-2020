@@ -10,8 +10,8 @@ const logoUrl = 'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/pub
 const NavBarContainer = styled.div`
   display: flex;
   flex-direction: inline-row;
-  position: sticky;
-  top: 100px;
+  overflow: visible;
+  top: 20rem;
   height: 6vh;
   background: ${theme.navy};
   justify-content: space-between;
@@ -91,6 +91,12 @@ const BurgerContainer = styled.div`
   align-items: flex-end;
 `;
 
+const Container = styled.div`
+ position: sticky;
+ top: 0px;
+ z-index: 99999;
+`;
+
 const burgerStyle = {
   bmBurgerButton: {
     position: 'relative',
@@ -142,7 +148,7 @@ export default class Navbar extends Component {
     const { entries } = this.props;
     const { menuOpen } = this.state;
     return (
-      <div>
+      <Container>
         <Desktop>
           <NavBarContainer>
             {entries.map((entry) => {
@@ -208,7 +214,7 @@ export default class Navbar extends Component {
             </BurgerContainer>
           </NavBarContainer>
         </MobileAndTablet>
-      </div>
+      </Container>
     );
   }
 }
