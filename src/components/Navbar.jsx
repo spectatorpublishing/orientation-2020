@@ -22,10 +22,6 @@ const NavBarContainer = styled.div`
     margin-left: 2vw;
   }
 
-  & > :first-child {
-    margin-left: 2vw;
-  }
-
   @media (max-width: ${theme.large}) {
     display: flex;
     align-items: center;
@@ -92,9 +88,9 @@ const BurgerContainer = styled.div`
 `;
 
 const Container = styled.div`
- position: sticky;
- top: 0px;
- z-index: 99999;
+  position: sticky;
+  top: 0px;
+  z-index: 99999;
 `;
 
 const burgerStyle = {

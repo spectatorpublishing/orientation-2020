@@ -11,6 +11,7 @@ import RegistrationData from './data/RegistrationData';
 import CampusLifeData from './data/CampusLifeData';
 import AcademicsData from './data/AcademicsData';
 import StudentLifeData from './data/StudentLifeData';
+import ZoomData from './data/ZoomData';
 
 const navBarEntries = [
   {
@@ -23,7 +24,7 @@ const navBarEntries = [
   },
   {
     title: 'ZOOM UNIVERSITY',
-    linkUrl: '/orientation-2020/#/registration',
+    linkUrl: '/orientation-2020/#/zoomuniversity',
   },
   {
     title: 'STUDENT LIFE',
@@ -44,6 +45,10 @@ const barnumbia = () => (
   <Subpage title="GET TO KNOW BARNUMBIA" data={BarnumbiaData} />
 );
 const academics = () => <Subpage title="ACADEMICS" data={AcademicsData} />;
+const zoomuniversity = () => (
+  <Subpage title="ZOOM UNIVERSITY" data={ZoomData} />
+);
+
 const studentlife = () => (
   <Subpage title="STUDENT LIFE" data={StudentLifeData} />
 );
@@ -65,6 +70,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={home} />
           <Route exact path="/barnumbia" component={barnumbia} />
+          <Route exact path="/zoomuniversity" component={zoomuniversity} />
           <Route exact path="/academics" component={academics} />
           <Route exact path="/studentlife" component={studentlife} />
           <Route exact path="/registration" component={course} />
