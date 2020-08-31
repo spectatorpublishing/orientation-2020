@@ -16,19 +16,19 @@ import ZoomData from './data/ZoomData';
 const navBarEntries = [
   {
     title: 'HOME',
-    linkUrl: '/',
+    linkUrl: '/orientation-2020/',
   },
   {
     title: 'ACADEMICS',
-    linkUrl: '/academics',
+    linkUrl: '/orientation-2020/academics',
   },
   {
     title: 'ZOOM UNIVERSITY',
-    linkUrl: '/zoomuniversity',
+    linkUrl: '/orientation-2020/zoomuniversity',
   },
   {
     title: 'STUDENT LIFE',
-    linkUrl: '/studentlife',
+    linkUrl: '/orientation-2020/studentlife',
   },
   {
     title: '24 TRADITIONS',
