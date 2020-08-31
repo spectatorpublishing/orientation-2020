@@ -64,9 +64,9 @@ const BannerRowDemo = [
     shadowColor: theme.orange,
   },
   {
-    title: 'PREPARE FOR COURSE REGISTRATION DOWNLOAD VERGIL+',
+    title: 'SIGN UP FOR THE WAKE UP CALL, OUR DAILY NEWSLETTER',
     url:
-      'https://www.columbiaspectator.com/spectrum/2018/04/30/vergils-debut-how-to-make-registration-a-piece-of-cake/',
+      'https://columbiaspectator.us4.list-manage.com/subscribe?u=a3d2eeb1ae5560ca04f82f042&id=e51c51d62d',
     color: theme.orange,
     shadowColor: theme.orange,
   },
@@ -156,7 +156,11 @@ const StaffInfo = [
   },
   {
     title: 'Revenue',
-    members: ['Sarah Peters, Revenue Director'],
+    members: [
+      'Sarah Peters, Revenue Director',
+      'Sophia Qureshi, Sales Manager',
+      'Joy Fan, Sales Manager',
+    ],
   },
   {
     title: 'Product',
@@ -294,7 +298,7 @@ const StaffInfoMobile = [
   {
     title: 'A&E',
     members: [
-      'Abby ROoney, A&E Editor',
+      'Abby Rooney, A&E Editor',
       'Olivia Doyle, A&E Deputy Editor',
       'Katie Levine, A&E Deputy Editor',
       'Noah Sheidlower, A&E Deputy Editor',
@@ -341,16 +345,16 @@ const getToKnowImage = {
 };
 const getToKnow = [
   {
-    tab: 'BARNUMBIA',
-    tabLink: '/orientation-2020/#/barnumbia',
+    tab: 'ZOOM UNIVERSITY',
+    tabLink: '/orientation-2020/#/zoomuniversity',
   },
   {
-    tab: 'CAMPUS LIFE',
-    tabLink: '/orientation-2020/#/campus',
+    tab: 'STUDENT LIFE',
+    tabLink: '/orientation-2020/#/studentlife',
   },
   {
     tab: 'ACADEMICS',
-    tabLink: '/orientation-2020/#/registration',
+    tabLink: '/orientation-2020/#/academics',
   },
 ];
 
