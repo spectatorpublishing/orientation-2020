@@ -79,7 +79,9 @@
     "build-storybook": "build-storybook -s public",
     "lint": "lint-staged",
     "eslint": "eslint --ext .jsx --ext .js src",
-    "stylelint": "stylelint \"**/*.js\" \"**/*.jsx\""
+    "stylelint": "stylelint \"**/*.js\" \"**/*.jsx\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "pre-commit": [
     "lint"
@@ -125,6 +127,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "gh-pages": "^3.1.0",
     "lint-staged": "^9.5.0",
     "pre-commit": "^1.2.2",
     "prettier": "^1.19.1",
