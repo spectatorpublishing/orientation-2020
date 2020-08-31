@@ -1,5 +1,5 @@
 # orientation-2020
-Spectator's landing page for 2019 orientation
+Spectator's landing page for 2020 orientation
 
 ## Setup
 

@@ -49,10 +49,10 @@ const tocEntries = [
     title: 'spectator staff',
     id: 'staff',
   },
-  {
-    title: 'print issue',
-    id: 'print',
-  },
+  // {
+  //   title: 'print issue',
+  //   id: 'print',
+  // },
 ];
 
 const BannerRowDemo = [
@@ -322,15 +322,15 @@ const getToKnowImage = {
 const getToKnow = [
   {
     tab: 'BARNUMBIA',
-    tabLink: '/orientation-2019/#/barnumbia',
+    tabLink: '/orientation-2020/#/barnumbia',
   },
   {
     tab: 'CAMPUS LIFE',
-    tabLink: '/orientation-2019/#/campus',
+    tabLink: '/orientation-2020/#/campus',
   },
   {
     tab: 'ACADEMICS',
-    tabLink: '/orientation-2019/#/registration',
+    tabLink: '/orientation-2020/#/registration',
   },
 ];
 
