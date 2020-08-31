@@ -339,80 +339,54 @@ const storiesToFollowArticles = [
     {
       href: 1,
       link:
-        'http://columbiaspectator.com/news/2019/08/22/manhattanville-move-progresses-but-faces-fundraising-delays/',
+        'https://www.columbiaspectator.com/news/2020/07/12/students-have-been-just-as-good-as-the-police-at-enforcing-the-legacy-of-enslavement-that-would-finance-and-expand-columbias-prestige/',
       photoUrl:
-        'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/J5VNCTISZFGZJDST3TTWOK2KNE.jpg',
-      photoAlt: 'manhattanville',
-      headline: 'Manhattanville move progresses, but faces fundraising delays',
+        'https://cloudfront-us-east-1.images.arcpublishing.com/spectator/TCFXOGSTV5ACTISGYNI7O7JVZI.jpg',
+      photoAlt: 'police',
+      headline:
+        'Students have been “just as good as the police” at enforcing the legacy of enslavement that would finance and expand Columbia’s prestige',
     },
     {
       href: 2,
       link:
-        'https://www.columbiaspectator.com/news/2019/08/22/elite-college-admissions-under-national-scrutiny/',
+        'https://www.columbiaspectator.com/news/2020/04/02/college-students-have-been-misrepresented-in-the-census-columbia-and-the-government-are-trying-to-change-that/',
       photoUrl:
-        'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/YAWDMXHTGVHZHEOV745FERFK3I.jpg',
-      photoAlt: 'College Admissions',
-      headline: 'Elite college admissions under national scrutiny',
+        'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/77UPXLTAYVADRI26EC2MSDD4TI.gif',
+      photoAlt: 'Low Steps',
+      headline:
+        'College students have been misrepresented in the census. Columbia and the government are trying to change that.',
     },
     {
       href: 3,
       link:
-        'https://www.columbiaspectator.com/news/2019/08/22/barnard-poised-for-sweeping-administrative-changes/',
+        'https://www.columbiaspectator.com/news/2020/03/13/upscaled-the-cost-of-columbia-construction-for-struggling-12th-avenue-businesses/',
       photoUrl:
-        'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/RALDR4APQZCCVGLZ3WIXPOE2LM',
-      photoAlt: 'Barnard administration',
-      headline: 'Barnard poised for sweeping administrative changes',
+        'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/L4Y6D2SPSVEA5O76U44RQE74RU.jpg',
+      photoAlt: 'Construction',
+      headline:
+        'Upscaled: The cost of Columbia construction for struggling 12th Avenue businessess',
     },
     {
       href: 4,
       link:
-        'https://www.columbiaspectator.com/news/2019/08/22/barnard-public-safety-faces-extensive-investigation-as-students-cite-incidents-of-antiblack-racism/',
+        'https://www.columbiaspectator.com/eye-lead/2020/05/15/uncertainty-looms-as-student-jobs-are-disappearing-during-the-great-lockdown/',
       photoUrl:
-        'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/VUII2WXMNVHFPMQFYH5W26XWYM.jpg',
-      photoAlt: 'Barnard Public Safety',
+        'https://cloudfront-us-east-1.images.arcpublishing.com/spectator/MJQEFP4WVNASVES4BCIJCHKZKM.gif',
+      photoAlt: 'Graphic',
       headline:
-        'Barnard Public Safety faces extensive investigation as students cite incidents of antiblack racism',
+        'Uncertainty Looms as Student Jobs are Disappearing During the Great Lockdown',
     },
   ],
   [
     {
       href: 5,
       link:
-        'http://columbiaspectator.com/news/2019/08/22/columbia-faces-major-transition-period-following-series-of-administrative-hires/',
+        'https://www.columbiaspectator.com/sports/2020/07/08/ivy-league-cancels-all-fall-sports-will-revisit-athletics-in-january-2021/',
       photoUrl:
-        'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/VU4IBS6FUZBSRCX47NNCDYQ45E.jpg',
-      photoAlt: 'Columbia administration',
+        'https://cloudfront-us-east-1.images.arcpublishing.com/spectator/MQHLKEY4KJHYRJLRNST6YKCI4Q.jpg',
+      photoAlt: 'Football',
       headline:
-        'Columbia faces major transition period following series of administrative hires',
-    },
-    {
-      href: 6,
-      link:
-        'https://www.columbiaspectator.com/news/2019/08/22/centennial-anniversary-of-the-core-marked-by-heated-debates-over-curriculums-diversity/',
-      photoUrl:
-        'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/4EDU67YKSBBIJPHSRFNJ3OCC6U.jpeg',
-      photoAlt: '100th anniversary of core',
-      headline:
-        'Centennial anniversary of the Core marked by heated debates over curriculum’s diversity',
-    },
-    {
-      href: 7,
-      link:
-        'https://www.columbiaspectator.com/news/2019/08/22/as-manhattanville-expands-columbia-continues-to-shape-its-relationship-with-harlem/',
-      photoUrl:
-        'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/PIGWCZ5Z7BERROWJDIDUXSLG4M.jpg',
-      photoAlt: 'WHDC',
-      headline:
-        'As Manhattanville expands, Columbia continues to shape its relationship with Harlem',
-    },
-    {
-      href: 8,
-      link:
-        'https://www.columbiaspectator.com/sports/2019/08/22/looking-back-at-the-2018-19-season/',
-      photoUrl:
-        'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/LUNTZKDWGVAWBDMTFW5QWRNPHU.jpg',
-      photoAlt: 'looking back at the 18-19 sports season',
-      headline: 'Looking back at the 2018-19 season',
+        'Ivy League cancels all fall sports, will revisit athletics in January 2021',
     },
   ],
 ];

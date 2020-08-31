@@ -29,7 +29,12 @@ const Row = styled.div`
 `;
 
 const Title = styled.h2`
-  margin: 3vh 2vw 3vh 2vw;
+  margin: 3vh 2vw 0vh 2vw;
+  text-align: center;
+`;
+
+const Afford = styled.p`
+  margin-bottom: 1vw;
   text-align: center;
 `;
 
@@ -98,6 +103,11 @@ const TextbooksContainer = (props) => {
   return (
     <OuterContainer>
       <Title>{title}</Title>
+      <Afford>
+        <a href="https://www.columbiaspectator.com/spectrum/2020/08/27/affordable-textbook-options/">
+          Find affordable textbooks here
+        </a>
+      </Afford>
       <InnerContainer>
         <Row>
           <MapsList color={theme.purple}>

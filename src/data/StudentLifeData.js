@@ -22,6 +22,13 @@ const StudentLifeData = [
   },
   {
     link:
+      'https://www.columbiaspectator.com/spectrum/2020/07/16/social-media-pages-you-should-follow/',
+    photoUrl:
+      'https://cloudfront-us-east-1.images.arcpublishing.com/spectator/IDE2H7NJPJEGVNYIIF5HKRDLMU.gif',
+    headline: 'Social media pages you should follow',
+  },
+  {
+    link:
       'https://www.columbiaspectator.com/spectrum/2019/05/21/an-international-students-guide-to-columbia/',
     photoUrl:
       'https://cloudfront-us-east-1.images.arcpublishing.com/spectator/JZMSA6EVLJFEDDRHGXNYZIBZTE',
@@ -40,20 +47,6 @@ const StudentLifeData = [
     photoUrl:
       'https://cloudfront-us-east-1.images.arcpublishing.com/spectator/UHUOHLCSFZHIDIG3GXSZYFB5WA.jpg',
     headline: 'Self-care and when to reach out: Prioritizing your mental health',
-  },
-  {
-    link:
-      'https://www.columbiaspectator.com/spectrum/2019/01/30/seven-ways-to-start-a-conversation-after-class/',
-    photoUrl:
-      'https://cloudfront-us-east-1.images.arcpublishing.com/spectator/PNCQPVWPE5DPTEMDDLERBYY57E.gif',
-    headline: 'Seven ways to start a conversation after class',
-  },
-  {
-    link:
-      'https://www.columbiaspectator.com/spectrum/2018/06/09/roommate-conversations-to-have-before-nsop/',
-    photoUrl:
-      'https://cloudfront-us-east-1.images.arcpublishing.com/spectator/6QB6U7FGFNB5ZPBXQRT7X4H3S4',
-    headline: 'Roommate conversations to have before NSOP',
   },
   {
     link:

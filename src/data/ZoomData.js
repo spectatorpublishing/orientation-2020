@@ -29,14 +29,6 @@ const AcademicsData = [
     headline:
       'Columbia has moved all undergraduate classes online. Here’s what you should know',
   },
-  {
-    link:
-      'https://www.columbiaspectator.com/spectrum/2020/04/01/how-to-do-college-online-a-guide-to-our-new-virtual-reality-of-learning/',
-    photoUrl:
-      'https://cloudfront-us-east-1.images.arcpublishing.com/spectator/WI7KWA5WJRB6PKEURLHP7PIT74.jpg',
-    headline:
-      'How to do college online: A guide to our new virtual reality of learning',
-  },
 ];
 
 export default AcademicsData;

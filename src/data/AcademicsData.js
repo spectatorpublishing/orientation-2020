@@ -62,13 +62,6 @@ const AcademicsData = [
       'https://cloudfront-us-east-1.images.arcpublishing.com/spectator/JUUQCG5C2JAF7M4Z232KL7DGYE.jpg',
     headline: 'Academic advice for incoming transfer students',
   },
-  {
-    link:
-      'https://www.columbiaspectator.com/spectrum/2020/07/16/social-media-pages-you-should-follow/',
-    photoUrl:
-      'https://cloudfront-us-east-1.images.arcpublishing.com/spectator/IDE2H7NJPJEGVNYIIF5HKRDLMU.gif',
-    headline: 'Social media pages you should follow',
-  },
 ];
 
 export default AcademicsData;
