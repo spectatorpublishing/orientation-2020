@@ -1,14 +1,14 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cb7f3ee8953220ac2114674e0af5b55e",
+    "revision": "6cc1a6a6d33e1809e6bc26129b1b8906",
     "url": "/orientation-2020/index.html"
   },
   {
-    "revision": "c52fa7ca7a728da8ac3b",
+    "revision": "63e14944ae718d6e1a4d",
     "url": "/orientation-2020/static/css/main.ec34ea6c.css"
   },
   {
-    "revision": "c52fa7ca7a728da8ac3b",
-    "url": "/orientation-2020/static/js/main.b41f7b75.js"
+    "revision": "63e14944ae718d6e1a4d",
+    "url": "/orientation-2020/static/js/main.0e06a7b1.js"
   }
 ]);
