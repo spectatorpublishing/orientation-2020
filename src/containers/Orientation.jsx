@@ -412,6 +412,26 @@ const storiesToFollowArticles = [
       headline:
         'Ivy League cancels all fall sports, will revisit athletics in January 2021',
     },
+    {
+      href: 6,
+      link:
+        'https://www.columbiaspectator.com/the-eye/2020/05/26/graduate-workers-went-on-strike-without-union-authorization-what-will-that-mean-for-the-future-of-labor-organizing/',
+      photoUrl:
+        'https://cloudfront-us-east-1.images.arcpublishing.com/spectator/NFNRVDYCGJDWRMF7B4Q3FTYWQE.jpg',
+      photoAlt: 'Low Steps',
+      headline:
+        'Graduate Workers Went on Strike Without Union Authorization. What Will That Mean for The Future of Labor Organizing?',
+    },
+    {
+      href: 7,
+      link:
+        'https://www.columbiaspectator.com/the-eye/2020/04/10/at-zoom-university-crepe-making-photoshop-sets-and-virtual-backgrounds-keep-us-connected/',
+      photoUrl:
+        'https://cloudfront-us-east-1.images.arcpublishing.com/spectator/MYPTC4R7DRD3TN45YZAK3YALEI.jpg',
+      photoAlt: 'Illustration',
+      headline:
+        'At Zoom University, Crepe-Making, Photoshop Sets, and Virtual Backgrounds Keep Us Connected.',
+    },
   ],
 ];
 
