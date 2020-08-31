@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/orientation-2020/static/css/main.ec34ea6c.css",
-    "main.js": "/orientation-2020/static/js/main.f501effd.js",
-    "main.js.map": "/orientation-2020/static/js/main.f501effd.js.map",
+    "main.js": "/orientation-2020/static/js/main.c643a0bc.js",
+    "main.js.map": "/orientation-2020/static/js/main.c643a0bc.js.map",
     "index.html": "/orientation-2020/index.html",
-    "precache-manifest.e0925e457b82338070ea6d6cdd9f7bc4.js": "/orientation-2020/precache-manifest.e0925e457b82338070ea6d6cdd9f7bc4.js",
+    "precache-manifest.a67bf406b786e47a19a821b39fc252d1.js": "/orientation-2020/precache-manifest.a67bf406b786e47a19a821b39fc252d1.js",
     "service-worker.js": "/orientation-2020/service-worker.js",
     "static/css/main.ec34ea6c.css.map": "/orientation-2020/static/css/main.ec34ea6c.css.map"
   }
