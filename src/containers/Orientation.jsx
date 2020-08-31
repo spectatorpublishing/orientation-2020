@@ -26,7 +26,7 @@ const tocEntries = [
     id: 'banner',
   },
   {
-    title: '116 things to do before graduating',
+    title: '24 traditions for the class of 2024',
     id: 'banner',
   },
   {
@@ -71,14 +71,14 @@ const BannerRowDemo = [
     shadowColor: theme.orange,
   },
   {
-    title: '116 THINGS TO DO BEFORE GRADUATING',
+    title: '24 TRADITIONS FOR THE CLASS OF 2024',
     url: 'https://www.columbiaspectator.com/orientation-2018/116-traditions/',
     color: theme.yellow,
     shadowColor: theme.orange,
   },
   {
     title: 'GET TEXTBOOKS',
-    url: '/orientation-2019/#/textbooks',
+    url: '/orientation-2020/#/textbooks',
     color: theme.navy,
     shadowColor: theme.orange,
   },
@@ -105,7 +105,7 @@ const MobileBannerRowDemo = [
   },
   {
     title: 'GET YOUR TEXTBOOKS',
-    url: '/orientation-2019/#/textbooks',
+    url: '/orientation-2020/#/textbooks',
     color: theme.navy,
   },
   {
