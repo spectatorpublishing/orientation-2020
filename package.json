@@ -2,7 +2,7 @@
   "name": "orientation-2020",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://spectatorpublishing.github.io/orientation-2020",
+  "homepage": "https://orientation.columbiadailyspectator.com/",
   "dependencies": {
     "@babel/core": "7.5.5",
     "@babel/runtime": "^7.11.2",
