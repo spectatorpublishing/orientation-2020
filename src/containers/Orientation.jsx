@@ -166,7 +166,7 @@ const StaffInfo = [
     title: 'Product',
     members: [
       'David Wang, Head of Product',
-      'McKenna Gillard, Engineering Manager',
+      'McKenna Gillard, Head of Engineering',
     ],
   },
   {
@@ -271,7 +271,7 @@ const StaffInfoMobile = [
     title: 'Product',
     members: [
       'David Wang, Head of Product',
-      'McKenna Gillard, Engineering Manager',
+      'McKenna Gillard, Head of Engineering',
     ],
   },
   {
