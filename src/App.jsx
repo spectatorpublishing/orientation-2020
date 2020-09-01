@@ -20,15 +20,15 @@ const navBarEntries = [
   },
   {
     title: 'ACADEMICS',
-    linkUrl: '/academics',
+    linkUrl: '/#/academics',
   },
   {
     title: 'ZOOM UNIVERSITY',
-    linkUrl: '/zoomuniversity',
+    linkUrl: '/#/zoomuniversity',
   },
   {
     title: 'STUDENT LIFE',
-    linkUrl: '/studentlife',
+    linkUrl: '/#/studentlife',
   },
   {
     title: '24 TRADITIONS',

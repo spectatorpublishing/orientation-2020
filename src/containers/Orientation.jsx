@@ -78,7 +78,7 @@ const BannerRowDemo = [
   },
   {
     title: 'GET TEXTBOOKS',
-    url: '/textbooks',
+    url: '/#/textbooks',
     color: theme.navy,
     shadowColor: theme.orange,
   },
@@ -105,7 +105,7 @@ const MobileBannerRowDemo = [
   },
   {
     title: 'GET YOUR TEXTBOOKS',
-    url: '/textbooks',
+    url: '/#/textbooks',
     color: theme.navy,
   },
   {
@@ -346,15 +346,15 @@ const getToKnowImage = {
 const getToKnow = [
   {
     tab: 'ZOOM UNIVERSITY',
-    tabLink: '/zoomuniversity',
+    tabLink: '/#/zoomuniversity',
   },
   {
     tab: 'STUDENT LIFE',
-    tabLink: '/studentlife',
+    tabLink: '/#/studentlife',
   },
   {
     tab: 'ACADEMICS',
-    tabLink: '/academics',
+    tabLink: '/#/academics',
   },
 ];
 
