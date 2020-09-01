@@ -29,6 +29,22 @@ const AcademicsData = [
     headline:
       'Columbia has moved all undergraduate classes online. Here’s what you should know',
   },
+  {
+    link:
+      'https://www.columbiaspectator.com/spectrum/2020/08/31/heres-five-professors-advice-on-succeeding-in-your-classes-during-a-remote-semester/',
+    photoUrl:
+      'https://cloudfront-us-east-1.images.arcpublishing.com/spectator/LDJSCOJT2JEAJOKE2IIDUF2M3I.jpg',
+    headline:
+      'Here’s five professors’ advice on succeeding in your classes during a remote semester',
+  },
+  {
+    link:
+      'https://www.columbiaspectator.com/spectrum/2020/08/31/advice-for-another-remote-semester-what-we-learned-from-the-spring/',
+    photoUrl:
+      'https://cloudfront-us-east-1.images.arcpublishing.com/spectator/GNBBM6FLJBDNDHD6VOBQSLHNCA.jpg',
+    headline:
+      'Advice for another remote semester: What we learned from the spring',
+  },
 ];
 
 export default AcademicsData;
