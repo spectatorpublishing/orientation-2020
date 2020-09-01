@@ -78,7 +78,7 @@ const BannerRowDemo = [
   },
   {
     title: 'GET TEXTBOOKS',
-    url: '/orientation-2020/#/textbooks',
+    url: '/textbooks',
     color: theme.navy,
     shadowColor: theme.orange,
   },
@@ -92,20 +92,20 @@ const MobileBannerRowDemo = [
     color: theme.purple,
   },
   {
-    title: 'DOWNLOAD VERGIL+',
+    title: 'SIGN UP FOR THE WAKE UP CALL, OUR DAILY NEWSLETTER',
     url:
-      'https://www.columbiaspectator.com/spectrum/2018/04/30/vergils-debut-how-to-make-registration-a-piece-of-cake/',
+      'https://columbiaspectator.us4.list-manage.com/subscribe?u=a3d2eeb1ae5560ca04f82f042&id=e51c51d62d',
 
     color: theme.orange,
   },
   {
-    title: '116 THINGS TO DO BEFORE GRADUATING',
+    title: '24 TRADITIONS FOR THE CLASS OF 2024',
     url: 'https://www.columbiaspectator.com/orientation-2018/116-traditions/',
     color: theme.yellow,
   },
   {
     title: 'GET YOUR TEXTBOOKS',
-    url: '/orientation-2020/#/textbooks',
+    url: '/textbooks',
     color: theme.navy,
   },
   {
@@ -346,15 +346,15 @@ const getToKnowImage = {
 const getToKnow = [
   {
     tab: 'ZOOM UNIVERSITY',
-    tabLink: '/orientation-2020/#/zoomuniversity',
+    tabLink: '/zoomuniversity',
   },
   {
     tab: 'STUDENT LIFE',
-    tabLink: '/orientation-2020/#/studentlife',
+    tabLink: '/studentlife',
   },
   {
     tab: 'ACADEMICS',
-    tabLink: '/orientation-2020/#/academics',
+    tabLink: '/academics',
   },
 ];
 
