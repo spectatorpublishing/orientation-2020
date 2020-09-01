@@ -137,10 +137,10 @@ const StaffInfo = [
     title: 'Graphics',
     members: [
       'Raeedah Wahid, Graphics Editor',
-      'Jason Kao, Graphics Deputy Editor (News)',
-      'Charlotte Li, Graphics Deputy Editor (Eye)',
-      'Jessia Li, Graphics Deputy Editor',
-      'Jun Yi, Graphics Deputy Editor',
+      'Jason Kao, Graphics Deputy Editor',
+      'Charlotte Li, Graphics Deputy Editor',
+      'JessiCa Li, Graphics Deputy Editor',
+      'Jun Yi Zhang, Graphics Deputy Editor',
     ],
   },
   {
@@ -191,7 +191,7 @@ const StaffInfo = [
   {
     title: 'A&E',
     members: [
-      'Abby ROoney, A&E Editor',
+      'Abby Rooney, A&E Editor',
       'Olivia Doyle, A&E Deputy Editor',
       'Katie Levine, A&E Deputy Editor',
       'Noah Sheidlower, A&E Deputy Editor',
@@ -250,10 +250,10 @@ const StaffInfoMobile = [
     title: 'Graphics',
     members: [
       'Raeedah Wahid, Graphics Editor',
-      'Jason Kao, Graphics Deputy Editor (News)',
-      'Charlotte Li, Graphics Deputy Editor (Eye)',
-      'Jessia Li, Graphics Deputy Editor',
-      'Jun Yi, Graphics Deputy Editor',
+      'Jason Kao, Graphics Deputy Editor',
+      'Charlotte Li, Graphics Deputy Editor',
+      'JessiCa Li, Graphics Deputy Editor',
+      'Jun Yi Zhang, Graphics Deputy Editor',
     ],
   },
   {
@@ -337,11 +337,11 @@ const StaffInfoMobile = [
   },
 ];
 
-const recognition = 'COVER ART BY: HELEN YANG WEBSITE DESIGN BY: CECILIA ORDUÑA DEVELOPED BY: ARSALAAN ANSARI, WILLIAM CHIU, HARRISON WANG, ELAINE WANG, BILL CHEN & CHENOA BUNTS-ANDERSON';
+const recognition = 'COVER ART BY: BRENDA HUANG WEBSITE DESIGN BY: CECILIA ORDUÑA DEVELOPED BY: ARSALAAN ANSARI, WILLIAM CHIU, HARRISON WANG, ELAINE WANG, BILL CHEN & CHENOA BUNTS-ANDERSON';
 
 const getToKnowImage = {
   image:
-    'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/ZNKTNLGKAFHUTFSIXC4HFO3OR4.jpeg',
+    'https://cloudfront-us-east-1.images.arcpublishing.com/spectator/J5EV3DNOP5ASRE66X44U2PHWKU.png',
 };
 const getToKnow = [
   {

@@ -115,7 +115,7 @@ storiesOf("DividerWithNames", module).add("Default", () => (
 
 const backgroundImage = {
   image:
-    "https://spectator.arcpublishing.com/photo/resize/6OpqLabVVWxuYjOPt8GHrrT9CIE=/arc-anglerfish-arc2-prod-spectator/ZNKTNLGKAFHUTFSIXC4HFO3OR4.jpeg"
+    "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/J5EV3DNOP5ASRE66X44U2PHWKU.png"
 };
 const getToKnow = [
   {

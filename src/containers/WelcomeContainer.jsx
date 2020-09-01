@@ -5,8 +5,8 @@ import { Desktop, MobileAndTablet } from 'react-responsive-simple';
 import TableOfContents from '../components/TableOfContents';
 import { theme } from '../GlobalStyles';
 
-const photoUrl = 'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/KPXXJFOVYRHR5HPKJ76CND2574.jpg';
-const opaqueUrl = 'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/ZNKTNLGKAFHUTFSIXC4HFO3OR4.jpeg';
+const photoUrl = 'https://cloudfront-us-east-1.images.arcpublishing.com/spectator/27ZQOGHDQVFFFOMLIJNKL6HM5U.png';
+const opaqueUrl = 'https://cloudfront-us-east-1.images.arcpublishing.com/spectator/J5EV3DNOP5ASRE66X44U2PHWKU.png';
 
 const Container = styled.div`
   min-height: 100vh;
