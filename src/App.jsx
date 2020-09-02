@@ -6,6 +6,7 @@ import Subpage from './containers/SubpageContainer';
 import TextbooksContainer from './containers/TextbooksContainer';
 import { GlobalStyles, theme } from './GlobalStyles';
 import Navbar from './components/Navbar';
+import TraditionsContainer from './containers/TraditionsContainer';
 import BarnumbiaData from './data/BarnumbiaData';
 import RegistrationData from './data/RegistrationData';
 import CampusLifeData from './data/CampusLifeData';
@@ -32,8 +33,7 @@ const navBarEntries = [
   },
   {
     title: '24 TRADITIONS',
-    linkUrl:
-      'https://www.columbiaspectator.com/orientation-2018/116-traditions/',
+    linkUrl: '/#/traditions',
   },
   {
     title: 'JOIN SPEC',
@@ -60,6 +60,7 @@ const course = () => (
 const campus = () => <Subpage title="CAMPUS LIFE" data={CampusLifeData} />;
 
 const textbooks = () => <TextbooksContainer title="TEXTBOOK LINKS" />;
+const traditions = () => <TraditionsContainer title="" />;
 
 function App() {
   return (
@@ -76,6 +77,7 @@ function App() {
           <Route exact path="/registration" component={course} />
           <Route exact path="/campus" component={campus} />
           <Route exact path="/textbooks" component={textbooks} />
+          <Route exact path="/traditions" component={traditions} />
         </Switch>
       </>
     </ThemeProvider>
