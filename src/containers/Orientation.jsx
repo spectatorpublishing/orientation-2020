@@ -72,7 +72,7 @@ const BannerRowDemo = [
   },
   {
     title: '24 TRADITIONS FOR THE CLASS OF 2024',
-    url: 'https://www.columbiaspectator.com/orientation-2018/116-traditions/',
+    url: '/#/traditions',
     color: theme.yellow,
     shadowColor: theme.orange,
   },
@@ -100,7 +100,7 @@ const MobileBannerRowDemo = [
   },
   {
     title: '24 TRADITIONS FOR THE CLASS OF 2024',
-    url: 'https://www.columbiaspectator.com/orientation-2018/116-traditions/',
+    url: '/#/traditions',
     color: theme.yellow,
   },
   {
