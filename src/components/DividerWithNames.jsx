@@ -133,7 +133,7 @@ const DividerWithNames = (props) => {
       </BodyText>
       <br />
       <br />
-      <NameText>Cover art by: helen yang</NameText>
+      <NameText>Cover art by: Brenda Huang</NameText>
       <br />
       <NameText>Website design by: Cecilia ORDUÑA</NameText>
       <br />
