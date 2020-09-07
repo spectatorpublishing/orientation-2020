@@ -82,7 +82,7 @@ const Divider = (props) => {
       <br />
       <BodyText>
         <Anchor href={link}>Click here</Anchor>
-        <BodyText> to learn how to join our team</BodyText>
+        <BodyText> to learn how to join our team.</BodyText>
       </BodyText>
     </div>
   );

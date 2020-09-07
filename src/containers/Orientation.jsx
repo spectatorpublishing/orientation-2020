@@ -134,14 +134,8 @@ const StaffInfo = [
     ],
   },
   {
-    title: 'Graphics',
-    members: [
-      'Raeedah Wahid, Graphics Editor',
-      'Jason Kao, Graphics Deputy Editor',
-      'Charlotte Li, Graphics Deputy Editor',
-      'JessiCa Li, Graphics Deputy Editor',
-      'Jun Yi Zhang, Graphics Deputy Editor',
-    ],
+    title: 'Spec Brand Studios',
+    members: ['Heliqiong Sun , SBS Manager'],
   },
   {
     title: 'Opinion',
@@ -226,6 +220,30 @@ const StaffInfo = [
       'Jake Fisher, Engagement Manager',
     ],
   },
+  {
+    title: 'The Eye',
+    members: [
+      'Eve Washington , Managing Editor',
+      'Claudia Gohn, Lead Story Editor',
+      'Cole Cahill, Features Editor',
+      'Teresa Lawlor, Ear Executive Editor',
+      'Paul Hanna, Video Editor',
+    ],
+  },
+  {
+    title: 'Graphics',
+    members: [
+      'Raeedah Wahid, Graphics Editor',
+      'Jason Kao, Graphics Deputy Editor',
+      'Charlotte Li, Graphics Deputy Editor',
+      'JessiCa Li, Graphics Deputy Editor',
+      'Jun Yi Zhang, Graphics Deputy Editor',
+    ],
+  },
+  {
+    title: 'News Dev',
+    members: ['Hong SengDu , NewsDev Deputy'],
+  },
 ];
 
 const StaffInfoMobile = [
@@ -247,13 +265,10 @@ const StaffInfoMobile = [
     ],
   },
   {
-    title: 'Graphics',
+    title: 'Product',
     members: [
-      'Raeedah Wahid, Graphics Editor',
-      'Jason Kao, Graphics Deputy Editor',
-      'Charlotte Li, Graphics Deputy Editor',
-      'JessiCa Li, Graphics Deputy Editor',
-      'Jun Yi Zhang, Graphics Deputy Editor',
+      'David Wang, Head of Product',
+      'McKenna Gillard, Head of Engineering',
     ],
   },
   {
@@ -265,13 +280,6 @@ const StaffInfoMobile = [
       'Karlton Gaskin, Deputy Editorial Page Editor',
       'Lily Nathanson, Deputy Editorial Page Editor',
       'Ryan Oden, Deputy Editorial Page Editor',
-    ],
-  },
-  {
-    title: 'Product',
-    members: [
-      'David Wang, Head of Product',
-      'McKenna Gillard, Head of Engineering',
     ],
   },
   {
@@ -306,6 +314,16 @@ const StaffInfoMobile = [
     ],
   },
   {
+    title: 'Graphics',
+    members: [
+      'Raeedah Wahid, Graphics Editor',
+      'Jason Kao, Graphics Deputy Editor',
+      'Charlotte Li, Graphics Deputy Editor',
+      'JessiCa Li, Graphics Deputy Editor',
+      'Jun Yi Zhang, Graphics Deputy Editor',
+    ],
+  },
+  {
     title: 'Copy',
     members: [
       'Sarah Braka, Head Copy Editor',
@@ -334,6 +352,23 @@ const StaffInfoMobile = [
       'Evan Kong , Engagement Manager',
       'Jake Fisher, Engagement Manager',
     ],
+  },
+  {
+    title: 'The Eye',
+    members: [
+      'Eve Washington , Managing Editor',
+      'Claudia Gohn, Lead Story Editor',
+      'Cole Cahill, Features Editor',
+      'Teresa Lawlor, Ear Executive Editor',
+    ],
+  },
+  {
+    title: 'Spec Brand Studios',
+    members: ['Heliqiong Sun , SBS Manager'],
+  },
+  {
+    title: 'News Dev',
+    members: ['Hong SengDu , NewsDev Deputy'],
   },
 ];
 

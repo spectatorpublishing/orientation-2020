@@ -273,7 +273,7 @@ for (const a in e) {n.d(
             ? arguments[3]
             : '&';
           let a = e.join('').replace(I, '');
-          let i = t && n ? `${n } ${t } { ${ a } }` : a;
+          let i = t && n ? `${n} ${ t} { ${ a} }` : a;
         return (
           (U = r),
           (H = t),
@@ -834,7 +834,7 @@ for (const a in e) {n.d(
 i;
             return r;
           }),
-          n ? [`${n} {`].concat(r, ['}']) : r
+          n ? [`${n } {`].concat(r, ['}']) : r
         );
       };
       function ye(e, t, n) {
@@ -2282,8 +2282,7 @@ i;
               || -1 === e.indexOf('Mobile Safari')
               || -1 !== e.indexOf('Chrome')
               || -1 !== e.indexOf('Windows Phone'))
-            && window.history
-            && "pushState" in window.history
+            && window.history && 'pushState' in window.history
         );
       }());
       var a = !(window.navigator.userAgent.indexOf("Trident") === -1);
@@ -2455,7 +2454,7 @@ i;
       return t === -1 ? '' : e.substring(t + 1);
     }
     function P(e) {
-      window.location.replace(`${T(window.location.href) }#${e}`);
+      window.location.replace(`${T(window.location.href)}#${ e}`);
     }
     function A(e) {
       void 0 === e && (e = {}), b || Object(u.a)(!1);
@@ -3749,7 +3748,7 @@ i;
                 c.partial && (i += c.prefix);
                 continue;
               }
-              throw new TypeError(`Expected "${c.name}" to be defined`);
+              throw new TypeError(`Expected "${ c.name}" to be defined`);
             }
             if (r(f)) {
               if (!c.repeat) {throw new TypeError(
@@ -3762,7 +3761,7 @@ i;
               if (f.length === 0) {
                 if (c.optional) continue;
                 throw new TypeError(
-                  `Expected "${ c.name }" to not be empty`,
+                  `Expected "${ c.name}" to not be empty`,
                 );
               }
               for (let p = 0; p < f.length; p++) {
@@ -3833,15 +3832,15 @@ i;
           u.repeat && (p += `(?:${  f  }${p  })*`),
           (o += p = u.optional
             ? u.partial
-              ? `${f}(${ p})?`
+              ? `${f}(${p})?`
               : `(?:${  f  }(${  p  }))?`
-            : `${f}(${ p})`);
+            : `${f }(${ p})`);
         }
       }
       const h = s(n.delimiter || '/');
       var m = o.slice(-h.length) === h;
       return (
-        a || (o = `${m ? o.slice(0, -h.length) : o}(?:${ h}(?=$))?`),
+        a || (o = `${m ? o.slice(0, -h.length) : o}(?:${h}(?=$))?`),
         (o += i ? '$' : a && m ? '' : `(?=${  h  }|$)`),
         c(new RegExp(`^${  o}`, d(n)), t)
       );
@@ -4466,7 +4465,7 @@ i;
               && void 0 !== (s = Ve(_e, Qe, l, e, me, he, Oe, i, o, i))
               && (Qe = s).length === 0)
           ) return Xe + Qe + $e;
-          if (((Qe = `${l.join(',')}{${Qe}}`), be * ge != 0)) {
+          if (((Qe = `${l.join(',') }{${ Qe}}`), be * ge != 0)) {
             switch ((be !== 2 || He(Qe, 2) || (ge = 0), ge)) {
               case ue:
                 Qe = Qe.replace(g, `:${  M  }$1`) + Qe;
@@ -4495,7 +4494,7 @@ i;
           default:
             l = 0;
             var u = 0;
-            for (a = []; l < i; ++l) for (let d = 0; d < o; ++d) a[u++] = Be(`${e[d] } `, r[l], n, o).trim();
+            for (a = []; l < i; ++l) for (let d = 0; d < o; ++d) a[u++] = Be(`${e[d]} `, r[l], n, o).trim();
         }
         return a;
       }
@@ -4638,7 +4637,7 @@ i;
               }}
             return A + d + _ + d + d;
           case 964:
-            return `${A + d + _}flex-${ d}${d}`;
+            return `${A + d + _ }flex-${ d }${d}`;
           case 1023:
             if (d.charCodeAt(8) !== 99) break;
             return (
@@ -4646,7 +4645,7 @@ i;
                 .substring(d.indexOf(':', 15))
                 .replace('flex-', '')
                 .replace('space-between', 'justify')),
-              `${A }box-pack${ u}${A }${d }${_ }flex-pack${ u }${d}`
+              `${A}box-pack${u}${A}${d}${_}flex-pack${ u}${d}`
             );
           case 1005:
             return i.test(d)
@@ -4683,19 +4682,19 @@ i;
               case 203:
                 if (u.charCodeAt(8) < 111) break;
               case 115:
-                d = `${d.replace(u, A + u) };${ d}`;
+                d = `${d.replace(u, A + u)};${ d}`;
                 break;
               case 207:
               case 102:
-                d = d.replace(u, `${A + (f > 102 ? 'inline-' : '') }box`)
+                d = d.replace(u, `${A + (f > 102 ? 'inline-' : '')}box`)
                   + ';'
                   + d.replace(u, A + u)
                   + ';'
-                  + d.replace(u, `${_ + u }box`)
+                  + d.replace(u, `${_ + u}box`)
                   + ';'
                   + d;
             }
-            return `${d};`;
+            return `${d };`;
           case 938:
             if (d.charCodeAt(5) === q) {switch (d.charCodeAt(6)) {
                 case 105:
@@ -4752,7 +4751,7 @@ i;
       }
       function We(e, t) {
         const n = Ue(t, t.charCodeAt(0), t.charCodeAt(1), t.charCodeAt(2));
-        return n !== `${t};`
+        return n !== `${t };`
           ? n.replace(E, ' or ($1)').substring(4)
           : `(${  t  })`;
       }
@@ -5150,7 +5149,7 @@ onClick: function (t) {
         return function (n, r, a, i, o, l, s, u, c, d) {
           switch (n) {
             case 1:
-              if (c === 0 && r.charCodeAt(0) === 64) return e(`${r };`), '';
+              if (c === 0 && r.charCodeAt(0) === 64) return e(`${r};`), '';
               break;
             case 2:
               if (u === 0) return `${r }/*|*/`;
@@ -5268,7 +5267,7 @@ onClick: function (t) {
       return (
         r(e) === 'Object'
         && e.constructor === Object
-        && Object.getPrototypeOf(e) === Object.prototype
+          && Object.getPrototypeOf(e) === Object.prototype
       );
     }
     function i(e) {
@@ -5496,7 +5495,7 @@ onClick: function (t) {
                 }
             }}
           if (s) return r(a, t, n === '' ? `.${  D(t, 0)}` : n), 1;
-          if (((s = 0), (n = n === '' ? '.' : `${n }:`), Array.isArray(t))) {for (var u = 0; u < t.length; u++) {
+          if (((s = 0), (n = n === '' ? '.' : `${n}:`), Array.isArray(t))) {for (var u = 0; u < t.length; u++) {
               var c = n + D((l = t[u]), u);
               s += e(l, c, r, a);
             }}
@@ -5564,7 +5563,7 @@ onClick: function (t) {
     }
     function R(e, t, n, r, a) {
       let i = '';
-      n != null && (i = `${('' + n).replace(A, '$&/')}/`),
+      n != null && (i = `${('' + n).replace(A, '$&/') }/`),
       F(e, j, (t = _(t, i, r, a))),
       N(t);
     }
@@ -5970,8 +5969,8 @@ onClick: function (t) {
         ? a.type === 0
         : !r
           && t.length > 2
-          && (t[0] === 'o' || t[0] === 'O')
-          && (t[1] === 'n' || t[1] === 'N'))
+            && (t[0] === 'o' || t[0] === 'O')
+            && (t[1] === 'n' || t[1] === 'N'))
         || ((function (e, t, n, r) {
           if (
             t === null
@@ -8464,8 +8463,7 @@ onClick: function (t) {
         (o = l),
         (i.shared.pending = null),
         (s = e.alternate) !== null
-            && (s = s.updateQueue) !== null
-            && (s.baseQueue = l);
+            && (s = s.updateQueue) !== null && (s.baseQueue = l);
       }
       if (o !== null) {
         s = o.next;
@@ -8604,8 +8602,7 @@ onClick: function (t) {
         ? e.shouldComponentUpdate(r, i, o)
         : !t.prototype
             || !t.prototype.isPureReactComponent
-            || !Br(n, r)
-            || !Br(a, i);
+            || !Br(n, r) || !Br(a, i);
     }
     function bi(e, t, n) {
       let r = !1;
@@ -14225,7 +14222,7 @@ onClick: function (t) {
           let C = 'http://www.w3.org/2000/svg';
           let T = {};
         t.url = function (e) {
-          return `url('#${ e }')`;
+          return `url('#${e}')`;
         };
         function O(e, t) {
           if (t) {
@@ -14268,12 +14265,12 @@ onClick: function (t) {
                 || !(e instanceof Array || (Array.isArray && Array.isArray(e)))
             )
                 || (t == 'null' && e === null)
-                || (t === typeof e && e !== null)
-                || (t == 'object' && e === Object(e))
-                || p
-                  .call(e)
-                  .slice(8, -1)
-                  .toLowerCase() == t;
+                  || (t === typeof e && e !== null)
+                  || (t == 'object' && e === Object(e))
+                  || p
+                    .call(e)
+                    .slice(8, -1)
+                    .toLowerCase() == t;
         }
         function A(e, t, n) {
           return function a() {
@@ -20697,7 +20694,7 @@ s;
         ),
         a.a.createElement('br', null),
         a.a.createElement('br', null),
-        a.a.createElement(Ft, null, 'Cover art by: helen yang'),
+        a.a.createElement(Ft, null, 'Cover art by: Brenda Huang'),
         a.a.createElement('br', null),
         a.a.createElement(Ft, null, 'Website design by: Cecilia ORDU\xd1A'),
         a.a.createElement('br', null),
@@ -26404,4 +26401,4 @@ s;
         });
   },
 ]));
-// # sourceMappingURL=main.61b26f37.js.map
+// # sourceMappingURL=main.2cf2e5b1.js.map

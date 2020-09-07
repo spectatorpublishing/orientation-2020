@@ -98,7 +98,7 @@ const DividerWithNames = (props) => {
       <br />
       <BodyText>
         <Anchor href={link}>Click here</Anchor>
-        <BodyText> to learn how to join our team</BodyText>
+        <BodyText> to learn how to join our team.</BodyText>
       </BodyText>
     </div>
   );
@@ -129,7 +129,7 @@ const DividerWithNames = (props) => {
       <br />
       <BodyText>
         <Anchor href={link}>Click here</Anchor>
-        <BodyText> to learn how to join our team</BodyText>
+        <BodyText> to learn how to join our team.</BodyText>
       </BodyText>
       <br />
       <br />
