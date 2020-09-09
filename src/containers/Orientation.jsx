@@ -360,6 +360,7 @@ const StaffInfoMobile = [
       'Claudia Gohn, Lead Story Editor',
       'Cole Cahill, Features Editor',
       'Teresa Lawlor, Ear Executive Editor',
+      'Paul Hanna, Video Editor',
     ],
   },
   {

@@ -16,11 +16,11 @@ const JoinTheDiscourseData = [
   },
   {
     link:
-      'https://www.columbiaspectator.com/opinion/2020/03/29/100-words-we-asked-how-covid-19-has-impacted-students-lives-here-are-their-responses/',
+      'https://www.columbiaspectator.com/opinion/2020/09/08/dear-class-of-2024/',
     photoUrl:
-      'https://arc-anglerfish-arc2-prod-spectator.s3.amazonaws.com/public/6MTSNPXPPJEQRPTZFYEDZHPKOE.png',
+      'https://cloudfront-us-east-1.images.arcpublishing.com/spectator/R7CDAFZ57FE2DAHQISZB2FD7UI.gif',
     headline:
-      "[100 Words]: We asked how COVID-19 has impacted students' lives. Here are their responses.",
+      'Dear Class of 2024',
   },
 ];
 
